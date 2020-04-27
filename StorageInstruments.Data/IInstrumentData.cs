@@ -7,6 +7,7 @@ namespace StorageInstruments.Data
     public interface IInstrumentData
     {
         IEnumerable<Instrument> GetInstrumentsByName(string name);
+        Instrument GetById(int id);
     }
 
     public class InMemoryInstruments : IInstrumentData
@@ -20,6 +21,11 @@ namespace StorageInstruments.Data
                 new Instrument {Id = 2, Location = LocationType.Home, Name="SAD", owner="FFFF", Type = InstrumentType.Percurssion},
                 new Instrument {Id = 3, Location = LocationType.WithOwner, Name="gggg", owner="21df", Type = InstrumentType.Tools}
             };
+        }
+
+        public Instrument GetById(int id)
+        {
+            return instruments.FirstOrDefault(x => x.Id == id);
         }
 
         public IEnumerable<Instrument> GetInstrumentsByName(string name)

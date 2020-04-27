@@ -101,8 +101,6 @@ C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\net
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.csproj.CoreCompileInputs.cache
-C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.Views.pdb
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.csproj.CopyComplete
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.dll
@@ -113,3 +111,7 @@ C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\net
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.Model.dll
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.Data.pdb
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.Model.pdb
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Instruments\Detail.cshtml.g.cs
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.csproj.CoreCompileInputs.cache
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Instruments\NotFound.cshtml.g.cs
