@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageInstruments", "StorageInstruments\StorageInstruments.csproj", "{96DCA0C6-883F-42D4-BC9C-273FA9E77DE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageInstruments", "StorageInstruments\StorageInstruments.csproj", "{96DCA0C6-883F-42D4-BC9C-273FA9E77DE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageInstruments.Model", "StorageInstruments.Model\StorageInstruments.Model.csproj", "{1F9E5B41-3A6E-4B92-8C87-750F7A38ACAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageInstruments.Data", "StorageInstruments.Data\StorageInstruments.Data.csproj", "{B4A11690-A8E3-4E14-B4AD-79FC178EA8D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{96DCA0C6-883F-42D4-BC9C-273FA9E77DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96DCA0C6-883F-42D4-BC9C-273FA9E77DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96DCA0C6-883F-42D4-BC9C-273FA9E77DE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F9E5B41-3A6E-4B92-8C87-750F7A38ACAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F9E5B41-3A6E-4B92-8C87-750F7A38ACAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F9E5B41-3A6E-4B92-8C87-750F7A38ACAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F9E5B41-3A6E-4B92-8C87-750F7A38ACAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4A11690-A8E3-4E14-B4AD-79FC178EA8D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4A11690-A8E3-4E14-B4AD-79FC178EA8D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4A11690-A8E3-4E14-B4AD-79FC178EA8D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4A11690-A8E3-4E14-B4AD-79FC178EA8D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
