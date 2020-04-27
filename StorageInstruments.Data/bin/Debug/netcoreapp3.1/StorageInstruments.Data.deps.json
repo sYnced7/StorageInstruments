@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "StorageInstruments.Data/1.0.0": {
+        "dependencies": {
+          "StorageInstruments.Model": "1.0.0"
+        },
+        "runtime": {
+          "StorageInstruments.Data.dll": {}
+        }
+      },
+      "StorageInstruments.Model/1.0.0": {
+        "runtime": {
+          "StorageInstruments.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StorageInstruments.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StorageInstruments.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

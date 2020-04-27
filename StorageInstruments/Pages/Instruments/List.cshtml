@@ -5,6 +5,30 @@
 }
 
 <h1>List</h1>
+<form action="/" method="get">
+      <div class="form-group">
+          <div class="input-group">
+              <input type="search" class="form-control" value="" />
+              <span class="input-group-btn">
+                  <button class="btn btn-default">
+                      <i class="glyphicon glyphicon-search"></i>
+                  </button>
+              </span>
+          </div>
+      </div>
+</form>
+<table class="table">
+    @foreach (var item in Model.Instruments)
+    {
+    <tr>
+        <td>@item.Name</td>
+        <td>@item.Location</td>
+        <td>@item.owner</td>
+        <td>@item.Type</td>
+    </tr>
+    }
 
-@Model.Name
+</table>
+
+</table>
 

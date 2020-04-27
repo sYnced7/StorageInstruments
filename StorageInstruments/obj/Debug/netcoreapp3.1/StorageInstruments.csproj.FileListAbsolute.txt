@@ -109,3 +109,7 @@ C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\net
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.pdb
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.genruntimeconfig.cache
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Instruments\List.cshtml.g.cs
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.Data.dll
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.Model.dll
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.Data.pdb
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.Model.pdb
