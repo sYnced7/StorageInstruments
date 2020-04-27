@@ -27,7 +27,12 @@
         <td>@item.Type</td>
         <td>
             <a class="btn btn-lg" asp-page="./Detail" asp-route-instrumentId="@item.Id">
-                <i class="glyphicon glyphicon-zoom-in">Details</i> 
+                <i class="glyphicon glyphicon-zoom-in">Details</i>
+            </a>
+        </td>
+        <td>
+            <a class="btn btn-lg" asp-page="./Edit" asp-route-instrumentId="@item.Id">
+                <i class="glyphicon glyphicon-zoom-in">Details</i>
             </a>
         </td>
     </tr>

@@ -115,3 +115,4 @@ C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\net
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.csproj.CoreCompileInputs.cache
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Instruments\NotFound.cshtml.g.cs
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Instruments\Edit.cshtml.g.cs
