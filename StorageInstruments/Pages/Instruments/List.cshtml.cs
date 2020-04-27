@@ -16,6 +16,8 @@ namespace StorageInstruments.Pages.Instruments
         private readonly IInstrumentData instrumentData;
 
         public IEnumerable<Instrument> Instruments {get; set;}
+        [BindProperty(SupportsGet = true)]
+        public string SearchTerm { get; set; }
 
         public ListModel(IConfiguration configuration, IInstrumentData instrumentData)
         {
@@ -24,7 +26,7 @@ namespace StorageInstruments.Pages.Instruments
         }
         public void OnGet()
         {
-            Instruments = instrumentData.GetAllInstruments();
+            Instruments = instrumentData.GetInstrumentsByName(SearchTerm);
         }
     }
 }

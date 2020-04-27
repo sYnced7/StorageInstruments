@@ -5,13 +5,13 @@
 }
 
 <h1>List</h1>
-<form action="/" method="get">
+<form action="/Instruments/List" method="get">
       <div class="form-group">
           <div class="input-group">
-              <input type="search" class="form-control" value="" />
+              <input type="search" class="form-control" asp-for="SearchTerm"/>
               <span class="input-group-btn">
                   <button class="btn btn-default">
-                      <i class="glyphicon glyphicon-search"></i>
+                      <i class="glyphicon glyphicon-search">Search</i>
                   </button>
               </span>
           </div>

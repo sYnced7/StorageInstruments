@@ -6,7 +6,7 @@ namespace StorageInstruments.Data
 {
     public interface IInstrumentData
     {
-        IEnumerable<Instrument> GetAllInstruments();
+        IEnumerable<Instrument> GetInstrumentsByName(string name);
     }
 
     public class InMemoryInstruments : IInstrumentData
@@ -22,9 +22,10 @@ namespace StorageInstruments.Data
             };
         }
 
-        public IEnumerable<Instrument> GetAllInstruments()
+        public IEnumerable<Instrument> GetInstrumentsByName(string name)
         {
             return from r in instruments
+                   where string.IsNullOrEmpty(name) || r.Name.StartsWith(name)
                    orderby r.Id
                    select r;
         }
