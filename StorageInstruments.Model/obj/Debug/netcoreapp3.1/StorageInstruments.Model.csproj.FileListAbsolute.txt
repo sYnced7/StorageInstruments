@@ -1,7 +1,6 @@
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Model\bin\Debug\netcoreapp3.1\StorageInstruments.Model.deps.json
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Model\bin\Debug\netcoreapp3.1\StorageInstruments.Model.dll
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Model\bin\Debug\netcoreapp3.1\StorageInstruments.Model.pdb
-C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Model\obj\Debug\netcoreapp3.1\StorageInstruments.Model.csprojAssemblyReference.cache
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Model\obj\Debug\netcoreapp3.1\StorageInstruments.Model.csproj.CoreCompileInputs.cache
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Model\obj\Debug\netcoreapp3.1\StorageInstruments.Model.AssemblyInfoInputs.cache
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Model\obj\Debug\netcoreapp3.1\StorageInstruments.Model.AssemblyInfo.cs

@@ -1,4 +1,6 @@
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Data\bin\Debug\netcoreapp3.1\StorageInstruments.Data.deps.json
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Data\bin\Debug\netcoreapp3.1\StorageInstruments.Data.runtimeconfig.json
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Data\bin\Debug\netcoreapp3.1\StorageInstruments.Data.runtimeconfig.dev.json
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Data\bin\Debug\netcoreapp3.1\StorageInstruments.Data.dll
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Data\bin\Debug\netcoreapp3.1\StorageInstruments.Data.pdb
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Data\bin\Debug\netcoreapp3.1\StorageInstruments.Model.dll
@@ -10,3 +12,4 @@ C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Data\obj\Debu
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Data\obj\Debug\netcoreapp3.1\StorageInstruments.Data.csproj.CopyComplete
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Data\obj\Debug\netcoreapp3.1\StorageInstruments.Data.dll
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Data\obj\Debug\netcoreapp3.1\StorageInstruments.Data.pdb
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.Data\obj\Debug\netcoreapp3.1\StorageInstruments.Data.genruntimeconfig.cache

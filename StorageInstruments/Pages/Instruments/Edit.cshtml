@@ -16,8 +16,8 @@
     <div class="form-group">
         <label asp-for="Instrument.Location"></label>
         <select class="form-control" asp-for="Instrument.Location" asp-items="Model.LocationTypes">
-            <span class="text-danger" asp-validation-for="Instrument.Location"></span>
         </select>
+        <span class="text-danger" asp-validation-for="Instrument.Location"></span>
     </div>
     <div class="form-group">
         <label asp-for="Instrument.owner"></label>

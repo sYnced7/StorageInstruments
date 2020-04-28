@@ -1,0 +1,12 @@
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.DataContract\bin\Debug\netcoreapp3.1\StorageInstruments.DataContract.deps.json
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.DataContract\bin\Debug\netcoreapp3.1\StorageInstruments.DataContract.dll
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.DataContract\bin\Debug\netcoreapp3.1\StorageInstruments.DataContract.pdb
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.DataContract\bin\Debug\netcoreapp3.1\StorageInstruments.Model.dll
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.DataContract\bin\Debug\netcoreapp3.1\StorageInstruments.Model.pdb
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.DataContract\obj\Debug\netcoreapp3.1\StorageInstruments.DataContract.csprojAssemblyReference.cache
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.DataContract\obj\Debug\netcoreapp3.1\StorageInstruments.DataContract.csproj.CoreCompileInputs.cache
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.DataContract\obj\Debug\netcoreapp3.1\StorageInstruments.DataContract.AssemblyInfoInputs.cache
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.DataContract\obj\Debug\netcoreapp3.1\StorageInstruments.DataContract.AssemblyInfo.cs
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.DataContract\obj\Debug\netcoreapp3.1\StorageInstruments.DataContract.csproj.CopyComplete
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.DataContract\obj\Debug\netcoreapp3.1\StorageInstruments.DataContract.dll
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.DataContract\obj\Debug\netcoreapp3.1\StorageInstruments.DataContract.pdb
