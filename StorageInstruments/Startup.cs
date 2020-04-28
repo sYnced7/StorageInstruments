@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,9 +27,11 @@ namespace StorageInstruments
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContextPool<InstrumentDbContext>(options => {
-                options.UseSqlServer(Configuration.GetConnectionString("InstrumentsDb"));
-                });
+            //services.AddDbContextPool<InstrumentDbContext>(options => {
+            //    options.UseSqlServer(Configuration.GetConnectionString("InstrumentsDb"),
+            //                   sqlOptions => sqlOptions.MigrationsAssembly(typeof(Startup).GetTypeInfo().
+            //                                                                        Assembly.GetName().Name));
+            //    });
             services.AddSingleton<IInstrumentData, InMemoryInstruments>();
             services.AddRazorPages();
         }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BHnmFp9h6nIcdAEuhKo9iB0Mxzvp0ttRLG+AM/Qp3MFP8gA4JPAYp27KQOd8v4+vfUp/EaGaIPwK4oHc4m2WOA==",
+  "dgSpecHash": "DIipbo2wyPPYJFZiAo1NCizCjISH7vsm9lf1tu0w0bQ3MsbnMdcli8FPSJE9pmgvOXCG/1m/7BST9iMWZVpInQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Helder\\source\\repos\\StorageInstruments\\StorageInstruments.Data\\StorageInstruments.Data.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,6 @@
     "C:\\Users\\Helder\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.3\\microsoft.entityframeworkcore.design.3.1.3.nupkg.sha512",
     "C:\\Users\\Helder\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.3\\microsoft.entityframeworkcore.relational.3.1.3.nupkg.sha512",
     "C:\\Users\\Helder\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.3\\microsoft.entityframeworkcore.sqlserver.3.1.3.nupkg.sha512",
-    "C:\\Users\\Helder\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.3\\microsoft.entityframeworkcore.tools.3.1.3.nupkg.sha512",
     "C:\\Users\\Helder\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.3\\microsoft.extensions.caching.abstractions.3.1.3.nupkg.sha512",
     "C:\\Users\\Helder\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.3\\microsoft.extensions.caching.memory.3.1.3.nupkg.sha512",
     "C:\\Users\\Helder\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.3\\microsoft.extensions.configuration.3.1.3.nupkg.sha512",
