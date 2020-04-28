@@ -1,4 +1,4 @@
-﻿@page "{instrumentId:int}"
+﻿@page "{instrumentId:int?}"
 @model StorageInstruments.Pages.Instruments.EditModel
 @{
     ViewData["Title"] = "Edit";
@@ -11,20 +11,24 @@
     <div class="form-group">
         <label asp-for="Instrument.Name"></label>
         <input asp-for="Instrument.Name" class="form-control" />
+        <span class="text-danger" asp-validation-for="Instrument.Name"></span>
     </div>
     <div class="form-group">
         <label asp-for="Instrument.Location"></label>
         <select class="form-control" asp-for="Instrument.Location" asp-items="Model.LocationTypes">
+            <span class="text-danger" asp-validation-for="Instrument.Location"></span>
         </select>
     </div>
     <div class="form-group">
         <label asp-for="Instrument.owner"></label>
         <input asp-for="Instrument.owner" class="form-control" />
+        <span class="text-danger" asp-validation-for="Instrument.owner"></span>
     </div>
     <div class="form-group">
         <label asp-for="Instrument.Type"></label>
         <select class="form-control" asp-for="Instrument.Type" asp-items="Model.InstrumentTypes">
         </select>
+        <span class="text-danger" asp-validation-for="Instrument.Type"></span>
     </div>
     <button type="submit" class="btn btn-primary">Save</button>
 </form>

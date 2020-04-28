@@ -8,6 +8,11 @@ namespace StorageInstruments.Data
     {
         IEnumerable<Instrument> GetInstrumentsByName(string name);
         Instrument GetById(int id);
+
+        Instrument Add(Instrument instrument);
+
+        Instrument Update(Instrument instrument);
+        int Commit();
     }
 
     public class InMemoryInstruments : IInstrumentData
@@ -23,6 +28,19 @@ namespace StorageInstruments.Data
             };
         }
 
+        public Instrument Add(Instrument instrument)
+        {
+            instruments.Add(instrument);
+            instrument.Id = instruments.Max(x => x.Id) + 1;
+
+            return instrument;
+        }
+
+        public int Commit()
+        {
+            return 0;
+        }
+
         public Instrument GetById(int id)
         {
             return instruments.FirstOrDefault(x => x.Id == id);
@@ -34,6 +52,20 @@ namespace StorageInstruments.Data
                    where string.IsNullOrEmpty(name) || r.Name.StartsWith(name)
                    orderby r.Id
                    select r;
+        }
+
+        public Instrument Update(Instrument instrumentUpdated)
+        {
+            var instrument = instruments.FirstOrDefault(x => x.Id == instrumentUpdated.Id);
+
+            if(instrument != null)
+            {
+                instrument.Name = instrumentUpdated.Name;
+                instrument.Location = instrumentUpdated.Location;
+                instrument.owner = instrumentUpdated.owner;
+                instrument.Type = instrumentUpdated.Type;
+            }
+            return instrument;
         }
     }
 }

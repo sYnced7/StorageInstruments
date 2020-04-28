@@ -17,23 +17,56 @@ namespace StorageInstruments.Pages.Instruments
 
         public IEnumerable<SelectListItem> LocationTypes { get; set; }
         public IEnumerable<SelectListItem> InstrumentTypes { get; set; }
+        [BindProperty]
         public Instrument Instrument { get; set; }
         public EditModel(IInstrumentData instrumentData, IHtmlHelper htmlHelper)
         {
             this.instrumentData = instrumentData;
             this.htmlHelper = htmlHelper;
         }
-        public IActionResult OnGet(int instrumentId)
+        public IActionResult OnGet(int? instrumentId)
         {
-            LocationTypes = htmlHelper.GetEnumSelectList<LocationType>();
-            InstrumentTypes = htmlHelper.GetEnumSelectList<InstrumentType>();
-
-            Instrument = instrumentData.GetById(instrumentId);
-            if(Instrument == null)
+            LoadEnums();
+            if(instrumentId.HasValue)
+            {
+                Instrument = instrumentData.GetById(instrumentId.Value);
+            }
+            else
+            {
+                Instrument = new Instrument();
+            }
+            if (Instrument == null)
             {
                 RedirectToPage("./NotFound");
             }
+
             return Page();
+        }
+
+        public ActionResult OnPost()
+        {
+            if (!ModelState.IsValid)
+            {
+                LoadEnums();
+                return Page();
+            }
+            if(Instrument.Id > 0)
+            {
+                instrumentData.Update(Instrument);
+            }
+            else
+            {
+                instrumentData.Add(Instrument);
+            }
+            instrumentData.Commit();
+            TempData["Message"] = "Instrument Saved!";
+            return RedirectToPage("./Detail", new { instrumentId = Instrument.Id });
+        }
+
+        public void LoadEnums()
+        {
+            LocationTypes = htmlHelper.GetEnumSelectList<LocationType>();
+            InstrumentTypes = htmlHelper.GetEnumSelectList<InstrumentType>();
         }
     }
 }

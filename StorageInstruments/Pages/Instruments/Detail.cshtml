@@ -10,3 +10,8 @@ Very Soon
 
 <a asp-page="./List" class="btn btn-default">Back</a>
 
+@if(Model.Message != null)
+{
+    <div class="alert alert-info">@Model.Message</div>
+}
+

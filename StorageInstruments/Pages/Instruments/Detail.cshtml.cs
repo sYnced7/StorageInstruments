@@ -9,6 +9,8 @@ namespace StorageInstruments.Pages.Instruments
     {
         private readonly IInstrumentData instrumentsData;
         public Instrument Instrument { get; set; }
+        [TempData]
+        public string Message { get; set; }
 
         public DetailModel(IInstrumentData instrumentsData)
         {
