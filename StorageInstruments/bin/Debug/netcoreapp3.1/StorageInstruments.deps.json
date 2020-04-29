@@ -2119,6 +2119,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "3.1.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3",
+          "StorageInstruments.DataContract": "1.0.0",
           "StorageInstruments.Model": "1.0.0"
         },
         "runtime": {
@@ -2126,6 +2127,17 @@
         },
         "compile": {
           "StorageInstruments.Data.dll": {}
+        }
+      },
+      "StorageInstruments.DataContract/1.0.0": {
+        "dependencies": {
+          "StorageInstruments.Model": "1.0.0"
+        },
+        "runtime": {
+          "StorageInstruments.DataContract.dll": {}
+        },
+        "compile": {
+          "StorageInstruments.DataContract.dll": {}
         }
       },
       "StorageInstruments.Model/1.0.0": {
@@ -4856,6 +4868,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "StorageInstruments.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StorageInstruments.DataContract/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

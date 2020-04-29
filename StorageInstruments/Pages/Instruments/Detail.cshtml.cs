@@ -1,24 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using StorageInstruments.Data;
+using StorageInstruments.DataContract;
 using StorageInstruments.Model;
 
 namespace StorageInstruments.Pages.Instruments
 {
     public class DetailModel : PageModel
     {
-        private readonly IInstrumentData instrumentsData;
+        private readonly IInstrumentRepository instrumentRepository;
         public Instrument Instrument { get; set; }
         [TempData]
         public string Message { get; set; }
 
-        public DetailModel(IInstrumentData instrumentsData)
+        public DetailModel(IInstrumentRepository instrumentRepository)
         {
-            this.instrumentsData = instrumentsData;
+            this.instrumentRepository = instrumentRepository;
         }
         public IActionResult OnGet(int instrumentId)
         {
-            Instrument = instrumentsData.GetById(instrumentId);
+            Instrument = instrumentRepository.GetById(instrumentId);
             if(Instrument == null)
             {
                 return RedirectToPage("./NotFound");

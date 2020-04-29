@@ -1269,6 +1269,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "StorageInstruments.DataContract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "StorageInstruments.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/StorageInstruments.DataContract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StorageInstruments.DataContract.dll": {}
+        }
+      },
       "StorageInstruments.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -4917,6 +4930,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "StorageInstruments.DataContract/1.0.0": {
+      "type": "project",
+      "path": "../StorageInstruments.DataContract/StorageInstruments.DataContract.csproj",
+      "msbuildProject": "../StorageInstruments.DataContract/StorageInstruments.DataContract.csproj"
+    },
     "StorageInstruments.Model/1.0.0": {
       "type": "project",
       "path": "../StorageInstruments.Model/StorageInstruments.Model.csproj",
@@ -4928,6 +4946,7 @@
       "Microsoft.EntityFrameworkCore >= 3.1.3",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.3",
+      "StorageInstruments.DataContract >= 1.0.0",
       "StorageInstruments.Model >= 1.0.0"
     ]
   },
@@ -4961,6 +4980,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\Users\\Helder\\source\\repos\\StorageInstruments\\StorageInstruments.DataContract\\StorageInstruments.DataContract.csproj": {
+              "projectPath": "C:\\Users\\Helder\\source\\repos\\StorageInstruments\\StorageInstruments.DataContract\\StorageInstruments.DataContract.csproj"
+            },
             "C:\\Users\\Helder\\source\\repos\\StorageInstruments\\StorageInstruments.Model\\StorageInstruments.Model.csproj": {
               "projectPath": "C:\\Users\\Helder\\source\\repos\\StorageInstruments\\StorageInstruments.Model\\StorageInstruments.Model.csproj"
             }

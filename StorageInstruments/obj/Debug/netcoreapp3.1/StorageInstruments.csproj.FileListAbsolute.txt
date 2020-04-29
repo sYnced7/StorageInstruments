@@ -147,3 +147,5 @@ C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\net
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.dll
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.pdb
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.genruntimeconfig.cache
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.DataContract.dll
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.DataContract.pdb

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Configuration;
 using StorageInstruments.Data;
+using StorageInstruments.DataContract;
 using StorageInstruments.Model;
 
 namespace StorageInstruments.Pages.Instruments
@@ -13,20 +14,20 @@ namespace StorageInstruments.Pages.Instruments
     public class ListModel : PageModel
     {
         private readonly IConfiguration configuration;
-        private readonly IInstrumentData instrumentData;
+        private readonly IInstrumentRepository instrumentRepository;
 
         public IEnumerable<Instrument> Instruments {get; set;}
         [BindProperty(SupportsGet = true)]
         public string SearchTerm { get; set; }
 
-        public ListModel(IConfiguration configuration, IInstrumentData instrumentData)
+        public ListModel(IConfiguration configuration, IInstrumentRepository instrumentRepository)
         {
             this.configuration = configuration;
-            this.instrumentData = instrumentData;
+            this.instrumentRepository = instrumentRepository;
         }
         public void OnGet()
         {
-            Instruments = instrumentData.GetInstrumentsByName(SearchTerm);
+            Instruments = instrumentRepository.GetInstrumentsByName(SearchTerm);
         }
     }
 }

@@ -2517,6 +2517,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "3.1.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3",
+          "StorageInstruments.DataContract": "1.0.0",
           "StorageInstruments.Model": "1.0.0"
         },
         "compile": {
@@ -2524,6 +2525,19 @@
         },
         "runtime": {
           "bin/placeholder/StorageInstruments.Data.dll": {}
+        }
+      },
+      "StorageInstruments.DataContract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "StorageInstruments.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/StorageInstruments.DataContract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StorageInstruments.DataContract.dll": {}
         }
       },
       "StorageInstruments.Model/1.0.0": {
@@ -8329,6 +8343,11 @@
       "type": "project",
       "path": "../StorageInstruments.Data/StorageInstruments.Data.csproj",
       "msbuildProject": "../StorageInstruments.Data/StorageInstruments.Data.csproj"
+    },
+    "StorageInstruments.DataContract/1.0.0": {
+      "type": "project",
+      "path": "../StorageInstruments.DataContract/StorageInstruments.DataContract.csproj",
+      "msbuildProject": "../StorageInstruments.DataContract/StorageInstruments.DataContract.csproj"
     },
     "StorageInstruments.Model/1.0.0": {
       "type": "project",

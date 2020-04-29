@@ -6,22 +6,23 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using StorageInstruments.Data;
+using StorageInstruments.DataContract;
 using StorageInstruments.Model;
 
 namespace StorageInstruments.Pages.Instruments
 {
     public class EditModel : PageModel
     {
-        private readonly IInstrumentData instrumentData;
+        private readonly IInstrumentRepository instrumentRepository;
         private readonly IHtmlHelper htmlHelper;
 
         public IEnumerable<SelectListItem> LocationTypes { get; set; }
         public IEnumerable<SelectListItem> InstrumentTypes { get; set; }
         [BindProperty]
         public Instrument Instrument { get; set; }
-        public EditModel(IInstrumentData instrumentData, IHtmlHelper htmlHelper)
+        public EditModel(IInstrumentRepository instrumentRepository, IHtmlHelper htmlHelper)
         {
-            this.instrumentData = instrumentData;
+            this.instrumentRepository = instrumentRepository;
             this.htmlHelper = htmlHelper;
         }
         public IActionResult OnGet(int? instrumentId)
@@ -29,7 +30,7 @@ namespace StorageInstruments.Pages.Instruments
             LoadEnums();
             if(instrumentId.HasValue)
             {
-                Instrument = instrumentData.GetById(instrumentId.Value);
+                Instrument = instrumentRepository.GetById(instrumentId.Value);
             }
             else
             {
@@ -52,13 +53,13 @@ namespace StorageInstruments.Pages.Instruments
             }
             if(Instrument.Id > 0)
             {
-                instrumentData.Update(Instrument);
+                instrumentRepository.Update(Instrument);
             }
             else
             {
-                instrumentData.Add(Instrument);
+                instrumentRepository.Add(Instrument);
             }
-            instrumentData.Commit();
+            instrumentRepository.Commit();
             TempData["Message"] = "Instrument Saved!";
             return RedirectToPage("./Detail", new { instrumentId = Instrument.Id });
         }

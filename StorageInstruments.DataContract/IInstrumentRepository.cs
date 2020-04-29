@@ -13,6 +13,8 @@ namespace StorageInstruments.DataContract
         Instrument Add(Instrument instrument);
 
         Instrument Update(Instrument instrument);
+
+        Instrument Delete(int id);
         int Commit();
     }
 }

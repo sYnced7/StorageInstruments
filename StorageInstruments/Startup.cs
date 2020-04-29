@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using StorageInstruments.Data;
+using StorageInstruments.DataContract;
 using StorageInstruments.Model;
 
 namespace StorageInstruments
@@ -27,12 +28,11 @@ namespace StorageInstruments
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContextPool<InstrumentDbContext>(options => {
-            //    options.UseSqlServer(Configuration.GetConnectionString("InstrumentsDb"),
-            //                   sqlOptions => sqlOptions.MigrationsAssembly(typeof(Startup).GetTypeInfo().
-            //                                                                        Assembly.GetName().Name));
-            //    });
-            services.AddSingleton<IInstrumentData, InMemoryInstruments>();
+            services.AddDbContextPool<InstrumentDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("InstrumentsDb"));
+            });
+            services.AddScoped<IInstrumentRepository, InstrumentRepository>();
             services.AddRazorPages();
         }
 

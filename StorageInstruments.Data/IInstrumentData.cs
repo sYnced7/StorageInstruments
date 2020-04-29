@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace StorageInstruments.Data
 {
+    //THIS CLASS WAS JUST USED TO TEST THE FRONTEND IN THE BEGIN. NOT BEING USED
     public interface IInstrumentData
     {
         IEnumerable<Instrument> GetInstrumentsByName(string name);
@@ -12,6 +13,8 @@ namespace StorageInstruments.Data
         Instrument Add(Instrument instrument);
 
         Instrument Update(Instrument instrument);
+
+        Instrument Delete(int id);
         int Commit();
     }
 
@@ -39,6 +42,18 @@ namespace StorageInstruments.Data
         public int Commit()
         {
             return 0;
+        }
+
+        public Instrument Delete(int id)
+        {
+            var instrument = instruments.FirstOrDefault(x => x.Id == id);
+
+            if (instrument != null)
+            {
+                instruments.Remove(instrument);
+            }
+
+            return instrument;
         }
 
         public Instrument GetById(int id)
