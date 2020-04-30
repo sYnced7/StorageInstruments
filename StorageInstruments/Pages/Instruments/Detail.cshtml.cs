@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using StorageInstruments.Data;
 using StorageInstruments.DataContract;
 using StorageInstruments.Model;
 
