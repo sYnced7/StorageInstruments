@@ -1,0 +1,26 @@
+﻿@using StorageInstruments.Model
+@model Instrument
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>@Model.Name</h3>
+        
+    </div>
+    <div class="panel-body">
+        <span>Name: @Model.Name</span>
+        <span>Location: @Model.Location</span>
+        <span>Owner: @Model.owner</span>
+        <span>Type: @Model.Type</span>
+    </div>
+    <div class="panel-footer">
+        <a class="btn btn-lg" asp-page="./Detail" asp-route-instrumentId="@Model.Id">
+            <i class="glyphicon glyphicon-zoom-in">Details</i>
+        </a>
+        <a class="btn btn-lg" asp-page="./Edit" asp-route-instrumentId="@Model.Id">
+            <i class="glyphicon glyphicon-zoom-in">Edit</i>
+        </a>
+        <a class="btn btn-lg" asp-page="./Delete" asp-route-instrumentId="@Model.Id">
+            <i class="glyphicon glyphicon-trash">Delete</i>
+        </a>
+    </div>
+</div>

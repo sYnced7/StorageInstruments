@@ -17,33 +17,10 @@
           </div>
       </div>
 </form>
-<table class="table">
-    @foreach (var item in Model.Instruments)
-    {
-    <tr>
-        <td>@item.Name</td>
-        <td>@item.Location</td>
-        <td>@item.owner</td>
-        <td>@item.Type</td>
-        <td>
-            <a class="btn btn-lg" asp-page="./Detail" asp-route-instrumentId="@item.Id">
-                <i class="glyphicon glyphicon-zoom-in">Details</i>
-            </a>
-        </td>
-        <td>
-            <a class="btn btn-lg" asp-page="./Edit" asp-route-instrumentId="@item.Id">
-                <i class="glyphicon glyphicon-zoom-in">Edit</i>
-            </a>
-        </td>
-        <td>
-            <a class="btn btn-lg" asp-page="./Delete" asp-route-instrumentId="@item.Id">
-                <i class="glyphicon glyphicon-trash">Delete</i>
-            </a>
-        </td>
-    </tr>
-    }
-
-</table>
+@foreach (var item in Model.Instruments)
+{
+    <partial name="_Summary" model="item" />		 
+}
 
 <a asp-page="./Edit" class="btn btn-primary">Add New</a>
 
