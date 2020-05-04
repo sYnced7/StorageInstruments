@@ -24,10 +24,12 @@
     ".NETCoreApp,Version=v3.1": {
       "StorageInstruments/1.0.0": {
         "dependencies": {
+          "font-awesome": "4.7.0",
           "Microsoft.EntityFrameworkCore.Design": "3.1.3",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.2",
           "StorageInstruments.Data": "1.0.0",
           "bootstrap": "4.4.1",
+          "bootstrap.sass": "4.4.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -313,6 +315,13 @@
           "popper.js": "1.16.0"
         }
       },
+      "bootstrap.sass/4.4.1": {
+        "dependencies": {
+          "jQuery": "3.0.0",
+          "popper.js": "1.16.0"
+        }
+      },
+      "font-awesome/4.7.0": {},
       "jQuery/3.0.0": {},
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "dependencies": {
@@ -3788,6 +3797,20 @@
       "sha512": "sha512-/QO9//Z8IYv8VmxTS3VzLaQC3wYnJDNbACnZHgLEeMABYjNuVPToLa6VDP2S4KwU3gUFiXglhQYZ00cddSK0IQ==",
       "path": "bootstrap/4.4.1",
       "hashPath": "bootstrap.4.4.1.nupkg.sha512"
+    },
+    "bootstrap.sass/4.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7u7LjG98ycsYFmA/h0rFRnxFgYpOPutUMAc+tghIVXC0pNFJ9Mqf3YDeMbfUP7meXIuPP/DyTpnW9Q0JVyV3gQ==",
+      "path": "bootstrap.sass/4.4.1",
+      "hashPath": "bootstrap.sass.4.4.1.nupkg.sha512"
+    },
+    "font-awesome/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MCuSOl63d8b9Etn7Jm4FJS1lp8d8W9fGwQ6xu5SqrRu8e/p+FZv2a8W/LguziecV1ZpTqZPamG5nfmZs28SahA==",
+      "path": "font-awesome/4.7.0",
+      "hashPath": "font-awesome.4.7.0.nupkg.sha512"
     },
     "jQuery/3.0.0": {
       "type": "package",

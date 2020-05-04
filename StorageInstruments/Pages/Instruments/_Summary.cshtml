@@ -1,26 +1,26 @@
 ﻿@using StorageInstruments.Model
 @model Instrument
 
-<div class="panel panel-default">
-    <div class="panel-heading">
+<div class="card">
+    <div class="card-header">
         <h3>@Model.Name</h3>
         
     </div>
-    <div class="panel-body">
+    <div class="card-body">
         <span>Name: @Model.Name</span>
         <span>Location: @Model.Location</span>
         <span>Owner: @Model.owner</span>
         <span>Type: @Model.Type</span>
     </div>
-    <div class="panel-footer">
+    <div class="card-footer">
         <a class="btn btn-lg" asp-page="./Detail" asp-route-instrumentId="@Model.Id">
-            <i class="glyphicon glyphicon-zoom-in">Details</i>
+            <i class="fa fa-info-circle"></i>
         </a>
         <a class="btn btn-lg" asp-page="./Edit" asp-route-instrumentId="@Model.Id">
-            <i class="glyphicon glyphicon-zoom-in">Edit</i>
+            <i class="fa fa-edit"></i>
         </a>
         <a class="btn btn-lg" asp-page="./Delete" asp-route-instrumentId="@Model.Id">
-            <i class="glyphicon glyphicon-trash">Delete</i>
+            <i class="fa fa-trash"></i>
         </a>
     </div>
 </div>

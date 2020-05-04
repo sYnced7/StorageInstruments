@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageInstruments.Model", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageInstruments.Data", "StorageInstruments.Data\StorageInstruments.Data.csproj", "{B4A11690-A8E3-4E14-B4AD-79FC178EA8D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageInstruments.DataContract", "StorageInstruments.DataContract\StorageInstruments.DataContract.csproj", "{35AA0666-C19F-450E-94E0-2EDCE1713562}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageInstruments.DataContract", "StorageInstruments.DataContract\StorageInstruments.DataContract.csproj", "{35AA0666-C19F-450E-94E0-2EDCE1713562}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
