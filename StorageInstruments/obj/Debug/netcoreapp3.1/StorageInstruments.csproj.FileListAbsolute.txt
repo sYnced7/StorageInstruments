@@ -1,5 +1,6 @@
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\libman.json
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.exe
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.deps.json
@@ -114,10 +115,14 @@ C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\net
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.Data.dll
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.DataContract.dll
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.Model.dll
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.Data.pdb
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.DataContract.pdb
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.Model.pdb
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.csprojAssemblyReference.cache
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.csproj.CoreCompileInputs.cache
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.RazorAssemblyInfo.cache
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.RazorAssemblyInfo.cs
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.AssemblyInfoInputs.cache
@@ -127,10 +132,12 @@ C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\net
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.RazorCoreGenerate.cache
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Instruments\Delete.cshtml.g.cs
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Instruments\Detail.cshtml.g.cs
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Instruments\Edit.cshtml.g.cs
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Instruments\List.cshtml.g.cs
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Instruments\NotFound.cshtml.g.cs
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Instruments\_Summary.cshtml.g.cs
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -145,10 +152,4 @@ C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\net
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.dll
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.pdb
 C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.genruntimeconfig.cache
-C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.DataContract.dll
-C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\StorageInstruments.DataContract.pdb
-C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Instruments\Delete.cshtml.g.cs
-C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Instruments\_Summary.cshtml.g.cs
-C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\bin\Debug\netcoreapp3.1\libman.json
-C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.csproj.CoreCompileInputs.cache
-C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\StorageInstruments.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\Components\InstrumentCount\Default.cshtml.g.cs

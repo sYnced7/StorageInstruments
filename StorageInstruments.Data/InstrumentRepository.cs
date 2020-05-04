@@ -42,6 +42,11 @@ namespace StorageInstruments.Data
             return db.Instruments.Find(id);
         }
 
+        public int GetCountOfInstruments()
+        {
+            return db.Instruments.Count();
+        }
+
         public IEnumerable<Instrument> GetInstrumentsByName(string name)
         {
             return from r in db.Instruments

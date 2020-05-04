@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageInstruments.Data", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageInstruments.DataContract", "StorageInstruments.DataContract\StorageInstruments.DataContract.csproj", "{35AA0666-C19F-450E-94E0-2EDCE1713562}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageInstruments.MSTest", "StorageInstruments.MSTest\StorageInstruments.MSTest.csproj", "{C19ED538-6D6F-49BD-964E-D221CDD4DB18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{35AA0666-C19F-450E-94E0-2EDCE1713562}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35AA0666-C19F-450E-94E0-2EDCE1713562}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35AA0666-C19F-450E-94E0-2EDCE1713562}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C19ED538-6D6F-49BD-964E-D221CDD4DB18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C19ED538-6D6F-49BD-964E-D221CDD4DB18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C19ED538-6D6F-49BD-964E-D221CDD4DB18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C19ED538-6D6F-49BD-964E-D221CDD4DB18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
