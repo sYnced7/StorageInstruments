@@ -1,0 +1,5 @@
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.API\bin\Debug\netcoreapp3.1\StorageInstruments.API.deps.json
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.API\bin\Debug\netcoreapp3.1\StorageInstruments.API.dll
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.API\obj\Debug\netcoreapp3.1\StorageInstruments.API.csprojAssemblyReference.cache
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.API\obj\Debug\netcoreapp3.1\StorageInstruments.API.AssemblyInfoInputs.cache
+C:\Users\Helder\source\repos\StorageInstruments\StorageInstruments.API\obj\Debug\netcoreapp3.1\StorageInstruments.API.AssemblyInfo.cs
