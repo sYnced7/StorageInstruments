@@ -8,6 +8,7 @@ Steps to done:<br/>
 Create a simple app with view to CRUD functions.<br/>
 Apply Entity Framework & Repository Layer<br/>
 Rest Api<br/>
+Swagger
 <br/>
 Following steps:<br/>
 Create a view with react<br/>
