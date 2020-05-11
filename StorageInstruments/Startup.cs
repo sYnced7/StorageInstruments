@@ -28,6 +28,7 @@ namespace StorageInstruments
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
             services.AddMvc();
 
             services.AddOpenApiDocument();
@@ -54,6 +55,7 @@ namespace StorageInstruments
                 app.UseHsts();
             }
 
+            app.UseDefaultFiles();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -64,11 +66,13 @@ namespace StorageInstruments
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
 
             app.UseOpenApi();
             app.UseSwaggerUi3();
             app.UseReDoc();
+            app.UseNodeModules();
         }
     }
 }

@@ -7,13 +7,37 @@
 
 <h2>Client Instruments</h2>
 
-@section Scripts{ 
+<table class="table" id="instruments">
+
+</table>
+
+@section Scripts{
+
+    <environment include="Development">
+        <script src="~/node_modules/datatables.net/js/jquery.dataTables.js"></script>
+        <script src="~/node_modules/datatables.net-dt/js/dataTables.dataTables.js"></script>
+        <link rel="stylesheet" type="text/css" src="~/node_modules/datatables.net-dt/css/jquery.dataTables.css">
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.css" />
+
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.js"></script>
+    </environment>
+
     <script>
         $(function () {
-            $.ajax("api/instruments/3",
+            $.ajax("/api/instruments/",
                 { method: "get" })
                 .then(function (response) {
-                    console.dir(response)
+                    $("#instruments").dataTable({
+                        data: response,
+                        columns: [
+                            { "data": "name" },
+                            { "data": "location" },
+                            { "data": "owner" },
+                            { "data": "type" }
+                        ]
+                    });
                 });
         });
     </script>

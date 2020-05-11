@@ -265,6 +265,10 @@
               "target": "Package",
               "version": "[13.5.0, )"
             },
+            "OdeToCode.UseNodeModules": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "bootstrap": {
               "target": "Package",
               "version": "[4.4.1, )"

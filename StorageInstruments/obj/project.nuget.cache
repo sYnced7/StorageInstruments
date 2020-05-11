@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gZGVozjTsmV1DuY9TrAKsUKYeuv8VwZulapAmYQSRIRvQJYL8gIB8A8VmoXdcOALoc1DB6YjVtwAF5GgKZ4Crw==",
+  "dgSpecHash": "FeuIYHfqKnVn+f5/XBpXo8RZ8EYA+9b/72fLe9rDStOXOx3rceNalOkvCM7aUAPDoVJgJrgsyxr5TLamZWaF5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Helder\\source\\repos\\StorageInstruments\\StorageInstruments\\StorageInstruments.csproj",
   "expectedPackageFiles": [
@@ -91,6 +91,7 @@
     "C:\\Users\\Helder\\.nuget\\packages\\nswag.generation\\13.5.0\\nswag.generation.13.5.0.nupkg.sha512",
     "C:\\Users\\Helder\\.nuget\\packages\\nswag.generation.aspnetcore\\13.5.0\\nswag.generation.aspnetcore.13.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
+    "C:\\Users\\Helder\\.nuget\\packages\\odetocode.usenodemodules\\3.0.0\\odetocode.usenodemodules.3.0.0.nupkg.sha512",
     "C:\\Users\\Helder\\.nuget\\packages\\popper.js\\1.16.0\\popper.js.1.16.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
