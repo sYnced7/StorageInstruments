@@ -3336,6 +3336,20 @@
         "runtime": {
           "bin/placeholder/StorageInstruments.Model.dll": {}
         }
+      },
+      "StorageInstruments.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "StorageInstruments.DataContract": "1.0.0",
+          "StorageInstruments.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/StorageInstruments.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StorageInstruments.Service.dll": {}
+        }
       }
     }
   },
@@ -10331,6 +10345,11 @@
       "type": "project",
       "path": "../StorageInstruments.Model/StorageInstruments.Model.csproj",
       "msbuildProject": "../StorageInstruments.Model/StorageInstruments.Model.csproj"
+    },
+    "StorageInstruments.Service/1.0.0": {
+      "type": "project",
+      "path": "../StorageInstruments.Service/StorageInstruments.Service.csproj",
+      "msbuildProject": "../StorageInstruments.Service/StorageInstruments.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -10343,6 +10362,7 @@
       "NSwag.AspNetCore >= 13.5.0",
       "OdeToCode.UseNodeModules >= 3.0.0",
       "StorageInstruments.Data >= 1.0.0",
+      "StorageInstruments.Service >= 1.0.0",
       "bootstrap >= 4.4.1",
       "bootstrap.sass >= 4.4.1"
     ]
@@ -10379,6 +10399,9 @@
           "projectReferences": {
             "C:\\Users\\Helder\\source\\repos\\StorageInstruments\\StorageInstruments.Data\\StorageInstruments.Data.csproj": {
               "projectPath": "C:\\Users\\Helder\\source\\repos\\StorageInstruments\\StorageInstruments.Data\\StorageInstruments.Data.csproj"
+            },
+            "C:\\Users\\Helder\\source\\repos\\StorageInstruments\\StorageInstruments.Service\\StorageInstruments.Service.csproj": {
+              "projectPath": "C:\\Users\\Helder\\source\\repos\\StorageInstruments\\StorageInstruments.Service\\StorageInstruments.Service.csproj"
             }
           }
         }

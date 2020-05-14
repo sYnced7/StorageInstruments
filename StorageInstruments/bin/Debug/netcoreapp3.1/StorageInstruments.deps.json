@@ -32,6 +32,7 @@
           "NSwag.AspNetCore": "13.5.0",
           "OdeToCode.UseNodeModules": "3.0.0",
           "StorageInstruments.Data": "1.0.0",
+          "StorageInstruments.Service": "1.0.0",
           "bootstrap": "4.4.1",
           "bootstrap.sass": "4.4.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -2755,6 +2756,18 @@
         },
         "compile": {
           "StorageInstruments.Model.dll": {}
+        }
+      },
+      "StorageInstruments.Service/1.0.0": {
+        "dependencies": {
+          "StorageInstruments.DataContract": "1.0.0",
+          "StorageInstruments.Model": "1.0.0"
+        },
+        "runtime": {
+          "StorageInstruments.Service.dll": {}
+        },
+        "compile": {
+          "StorageInstruments.Service.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -5831,6 +5844,11 @@
       "sha512": ""
     },
     "StorageInstruments.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StorageInstruments.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,18 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using StorageInstruments.Data;
 using StorageInstruments.DataContract;
-using StorageInstruments.Model;
+using StorageInstruments.Service;
 
 namespace StorageInstruments
 {
@@ -36,6 +30,8 @@ namespace StorageInstruments
             {
                 options.UseSqlServer(Configuration.GetConnectionString("InstrumentsDb"));
             });
+
+            services.AddScoped<IInstrumentService, InstrumentService>();
             services.AddScoped<IInstrumentRepository, InstrumentRepository>();
             services.AddRazorPages();
         }

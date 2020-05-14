@@ -43,6 +43,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\StorageInstruments.Data\StorageInstruments.Data.csproj" />
+    <ProjectReference Include="..\StorageInstruments.Service\StorageInstruments.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -6,23 +6,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using StorageInstruments.DataContract;
 using StorageInstruments.Model;
+using StorageInstruments.Service;
 
 namespace StorageInstruments.Pages.Instruments
 {
     public class DeleteModel : PageModel
     {
-        private readonly IInstrumentRepository instrumentRepository;
+        private readonly IInstrumentService instrumentService;
 
         [BindProperty]
         public Instrument Instrument { get; set; }
-        public DeleteModel(IInstrumentRepository instrumentRepository)
+        public DeleteModel(IInstrumentService instrumentService)
         {
-            this.instrumentRepository = instrumentRepository;
+            this.instrumentService = instrumentService;
         }
 
         public IActionResult OnGet(int instrumentId)
         {
-            Instrument = instrumentRepository.GetById(instrumentId);
+            Instrument = instrumentService.GetInstrument(true, instrumentId);
 
             if(Instrument == null)
             {
@@ -33,11 +34,9 @@ namespace StorageInstruments.Pages.Instruments
 
         public IActionResult OnPost(int instrumentId)
         {
-            var instrument = instrumentRepository.Delete(instrumentId);
+            var instrument = instrumentService.Delete(instrumentId);
 
-            instrumentRepository.Commit();
-
-            if(instrument == null)
+            if (instrument == null)
             {
                 return RedirectToPage("./NotFound");
             }
