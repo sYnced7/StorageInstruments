@@ -32,27 +32,53 @@ namespace StorageInstruments.Service
         }
 
         /// <summary>
-        /// Could retrieve a instrument by id [not complete]
+        /// Could retrieve a instrument by id
         /// </summary>
         /// <param name="getById"></param>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Instrument GetInstrument(bool getById, int? id)
+        public Instrument GetInstrumentById(int id)
         {
-            if(getById)
+            if(id != 0)
             {
-                if(id != null)
-                {
-                    int val = 0;
-                    bool validId = int.TryParse(id.ToString(), out val);
-                    if(validId && val > 0)
-                    {
-                        return instrumentRepository.GetById(val);
-                    }
-                }
-                return null;
+                return instrumentRepository.GetById(id);
             }
             return null;
         }
+
+        /// <summary>
+        /// Retrieves a list of instruments by his name
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public IEnumerable<Instrument> GetInstrumentsByName(string name)
+        {
+            return instrumentRepository.GetInstrumentsByName(name);
+        }
+        /// <summary>
+        /// Validates if is to update or add a new instrument
+        /// </summary>
+        /// <param name="instrument"></param>
+        /// <returns></returns>
+        public Instrument AddOrUpdateInstrument(Instrument instrument)
+        {
+            if (instrument.Id > 0)
+            {
+                instrumentRepository.Update(instrument);
+            }
+            else
+            {
+                instrumentRepository.Add(instrument);
+            }
+            instrumentRepository.Commit();
+
+            return instrument;
+        }
+
+        public int GetCountOfInstruments()
+        {
+            return instrumentRepository.GetCountOfInstruments();
+        }
+
     }
 }

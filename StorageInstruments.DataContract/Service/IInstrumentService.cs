@@ -7,7 +7,10 @@ namespace StorageInstruments.DataContract
 {
     public interface IInstrumentService
     {
-        Instrument GetInstrument(bool getById, int? id);
+        Instrument GetInstrumentById(int id);
         Instrument Delete(int id);
+        IEnumerable<Instrument> GetInstrumentsByName(string name);
+        Instrument AddOrUpdateInstrument(Instrument instrument);
+        int GetCountOfInstruments();
     }
 }

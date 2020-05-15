@@ -13,21 +13,19 @@ namespace StorageInstruments.Pages.Instruments
 {
     public class ListModel : PageModel
     {
-        private readonly IConfiguration configuration;
-        private readonly IInstrumentRepository instrumentRepository;
+        private readonly IInstrumentService instrumentService;
 
         public IEnumerable<Instrument> Instruments {get; set;}
         [BindProperty(SupportsGet = true)]
         public string SearchTerm { get; set; }
 
-        public ListModel(IConfiguration configuration, IInstrumentRepository instrumentRepository)
+        public ListModel(IInstrumentService instrumentService)
         {
-            this.configuration = configuration;
-            this.instrumentRepository = instrumentRepository;
+            this.instrumentService = instrumentService;
         }
         public void OnGet()
         {
-            Instruments = instrumentRepository.GetInstrumentsByName(SearchTerm);
+            Instruments = instrumentService.GetInstrumentsByName(SearchTerm);
         }
     }
 }

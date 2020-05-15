@@ -13,16 +13,16 @@ namespace StorageInstruments.Pages.Instruments
 {
     public class EditModel : PageModel
     {
-        private readonly IInstrumentRepository instrumentRepository;
+        private readonly IInstrumentService instrumentService;
         private readonly IHtmlHelper htmlHelper;
 
         public IEnumerable<SelectListItem> LocationTypes { get; set; }
         public IEnumerable<SelectListItem> InstrumentTypes { get; set; }
         [BindProperty]
         public Instrument Instrument { get; set; }
-        public EditModel(IInstrumentRepository instrumentRepository, IHtmlHelper htmlHelper)
+        public EditModel(IInstrumentService instrumentService, IHtmlHelper htmlHelper)
         {
-            this.instrumentRepository = instrumentRepository;
+            this.instrumentService = instrumentService;
             this.htmlHelper = htmlHelper;
         }
         public IActionResult OnGet(int? instrumentId)
@@ -30,7 +30,7 @@ namespace StorageInstruments.Pages.Instruments
             LoadEnums();
             if(instrumentId.HasValue)
             {
-                Instrument = instrumentRepository.GetById(instrumentId.Value);
+                Instrument = instrumentService.GetInstrumentById(instrumentId.Value);
             }
             else
             {
@@ -51,15 +51,9 @@ namespace StorageInstruments.Pages.Instruments
                 LoadEnums();
                 return Page();
             }
-            if(Instrument.Id > 0)
-            {
-                instrumentRepository.Update(Instrument);
-            }
-            else
-            {
-                instrumentRepository.Add(Instrument);
-            }
-            instrumentRepository.Commit();
+
+            instrumentService.AddOrUpdateInstrument(Instrument);
+            
             TempData["Message"] = "Instrument Saved!";
             return RedirectToPage("./Detail", new { instrumentId = Instrument.Id });
         }

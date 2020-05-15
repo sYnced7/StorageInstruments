@@ -23,7 +23,7 @@ namespace StorageInstruments.Pages.Instruments
 
         public IActionResult OnGet(int instrumentId)
         {
-            Instrument = instrumentService.GetInstrument(true, instrumentId);
+            Instrument = instrumentService.GetInstrumentById(instrumentId);
 
             if(Instrument == null)
             {

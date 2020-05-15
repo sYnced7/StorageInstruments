@@ -10,16 +10,16 @@ namespace StorageInstruments.Pages.ViewComponents
 {
     public class InstrumentCountViewComponent : ViewComponent
     {
-        private readonly IInstrumentRepository instrumentRepository;
+        private readonly IInstrumentService instrumentService;
 
-        public InstrumentCountViewComponent(IInstrumentRepository instrumentRepository)
+        public InstrumentCountViewComponent(IInstrumentService instrumentService)
         {
-            this.instrumentRepository = instrumentRepository;
+            this.instrumentService = instrumentService;
         }
 
         public IViewComponentResult Invoke()
         {
-            var count = instrumentRepository.GetCountOfInstruments();
+            var count = instrumentService.GetCountOfInstruments();
             return View(count);
         }
     }

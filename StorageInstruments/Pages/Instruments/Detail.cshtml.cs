@@ -7,18 +7,18 @@ namespace StorageInstruments.Pages.Instruments
 {
     public class DetailModel : PageModel
     {
-        private readonly IInstrumentRepository instrumentRepository;
+        private readonly IInstrumentService instrumentService;
         public Instrument Instrument { get; set; }
         [TempData]
         public string Message { get; set; }
 
-        public DetailModel(IInstrumentRepository instrumentRepository)
+        public DetailModel(IInstrumentService instrumentService)
         {
-            this.instrumentRepository = instrumentRepository;
+            this.instrumentService = instrumentService;
         }
         public IActionResult OnGet(int instrumentId)
         {
-            Instrument = instrumentRepository.GetById(instrumentId);
+            Instrument = instrumentService.GetInstrumentById(instrumentId);
             if(Instrument == null)
             {
                 return RedirectToPage("./NotFound");
