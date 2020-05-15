@@ -10,12 +10,10 @@ Just to learn how to build an application with .net core, learn new things and c
 
 - [x] Create a simple app with view to CRUD functions.
 - [ ] Apply Entity Framework & Repository Layer
-- [ ] Rest Api
-- [ ] Swagger
+- [x] Rest Api
+- [x] Swagger
 - [ ] Create a view with react
-- [ ] Improve Architecture(Add a service layer to performe comunications with data layer)
-- [ ] Create a view with react
-- [ ] Improve Architecture(Add a service layer to performe comunications with data layer)
+- [x] Improve Architecture(Add a service layer to perform comunications with data layer)
 - [ ] Create good unit tests
 - [ ] Isolate Controller
 - [ ] Isolate the client comunications with
