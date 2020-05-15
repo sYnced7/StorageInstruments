@@ -9,7 +9,7 @@ Just to learn how to build an application with .net core, learn new things and c
 ## TODO
 
 - [x] Create a simple app with view to CRUD functions.
-- [ ] Apply Entity Framework & Repository Layer
+- [x] Apply Entity Framework & Repository Layer
 - [x] Rest Api
 - [x] Swagger
 - [ ] Create a view with react
