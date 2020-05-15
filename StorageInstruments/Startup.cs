@@ -67,7 +67,6 @@ namespace StorageInstruments
 
             app.UseOpenApi();
             app.UseSwaggerUi3();
-            app.UseReDoc();
             app.UseNodeModules();
         }
     }
