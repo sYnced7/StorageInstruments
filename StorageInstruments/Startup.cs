@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using StorageInstruments.Config;
 using StorageInstruments.Data;
 using StorageInstruments.DataContract;
 using StorageInstruments.Service;
@@ -22,18 +23,7 @@ namespace StorageInstruments
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            services.AddMvc();
-
-            services.AddOpenApiDocument();
-            services.AddDbContextPool<InstrumentDbContext>(options =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("InstrumentsDb"));
-            });
-
-            services.AddScoped<IInstrumentService, InstrumentService>();
-            services.AddScoped<IInstrumentRepository, InstrumentRepository>();
-            services.AddRazorPages();
+            services = GenericConfiguration.Config(services, Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

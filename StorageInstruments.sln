@@ -13,9 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageInstruments.DataCont
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageInstruments.MSTest", "StorageInstruments.MSTest\StorageInstruments.MSTest.csproj", "{C19ED538-6D6F-49BD-964E-D221CDD4DB18}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageInstruments.API", "StorageInstruments.API\StorageInstruments.API.csproj", "{F306B8FE-1C9E-48CF-9A05-8000DC2438CC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageInstruments.Service", "StorageInstruments.Service\StorageInstruments.Service.csproj", "{C521ED0F-6ACB-4D0D-84A7-24131E852019}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageInstruments.Service", "StorageInstruments.Service\StorageInstruments.Service.csproj", "{C521ED0F-6ACB-4D0D-84A7-24131E852019}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,10 +41,6 @@ Global
 		{C19ED538-6D6F-49BD-964E-D221CDD4DB18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C19ED538-6D6F-49BD-964E-D221CDD4DB18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C19ED538-6D6F-49BD-964E-D221CDD4DB18}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F306B8FE-1C9E-48CF-9A05-8000DC2438CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F306B8FE-1C9E-48CF-9A05-8000DC2438CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F306B8FE-1C9E-48CF-9A05-8000DC2438CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F306B8FE-1C9E-48CF-9A05-8000DC2438CC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C521ED0F-6ACB-4D0D-84A7-24131E852019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C521ED0F-6ACB-4D0D-84A7-24131E852019}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C521ED0F-6ACB-4D0D-84A7-24131E852019}.Release|Any CPU.ActiveCfg = Release|Any CPU
