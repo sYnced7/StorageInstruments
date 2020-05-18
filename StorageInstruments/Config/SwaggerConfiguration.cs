@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,12 @@ namespace StorageInstruments.Config
         {
             services.AddOpenApiDocument();
             return services;
+        }
+
+        public static IApplicationBuilder AppBuilderConfig(IApplicationBuilder app)
+        {
+
+            return app;
         }
     }
 }
