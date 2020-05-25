@@ -3,6 +3,7 @@ using StorageInstruments.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace StorageInstruments.Data
 {
@@ -61,5 +62,26 @@ namespace StorageInstruments.Data
             entity.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             return instrument;
         }
+
+        #region API
+
+
+        public async Task<Instrument> PostInstrument(Instrument instrument)
+        {
+            return Add(instrument);
+        }
+        public async Task<Instrument> DeleteInstrument(int id)
+        {
+            var aux = db.Instruments.FindAsync(id);
+            if(aux == null)
+            {
+                return null;
+            }
+
+            return Delete(id);
+        }
+        #endregion
+
+
     }
 }

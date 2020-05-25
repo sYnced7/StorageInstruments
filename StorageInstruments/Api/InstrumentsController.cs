@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StorageInstruments.Data;
+using StorageInstruments.DataContract;
 using StorageInstruments.Model;
 
 namespace StorageInstruments.Api
@@ -13,11 +13,13 @@ namespace StorageInstruments.Api
     [ApiController]
     public class InstrumentsController : ControllerBase
     {
+        private readonly IInstrumentService instrumentService;
         private readonly InstrumentDbContext _context;
 
-        public InstrumentsController(InstrumentDbContext context)
+        public InstrumentsController(IInstrumentService instrumentService, InstrumentDbContext context)
         {
             _context = context;
+            this.instrumentService = instrumentService;
         }
 
         // GET: api/Instruments
@@ -79,26 +81,23 @@ namespace StorageInstruments.Api
         [HttpPost]
         public async Task<ActionResult<Instrument>> PostInstrument(Instrument instrument)
         {
-            _context.Instruments.Add(instrument);
-            await _context.SaveChangesAsync();
+            var aux = await instrumentService.PostInstrument(instrument);
 
-            return CreatedAtAction("GetInstrument", new { id = instrument.Id }, instrument);
+            return CreatedAtAction("GetInstrument", new { id = aux.Id }, aux);
         }
 
         // DELETE: api/Instruments/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Instrument>> DeleteInstrument(int id)
         {
-            var instrument = await _context.Instruments.FindAsync(id);
-            if (instrument == null)
+            var aux = await instrumentService.DeleteInstrument(id);
+
+            if (aux == null)
             {
                 return NotFound();
             }
 
-            _context.Instruments.Remove(instrument);
-            await _context.SaveChangesAsync();
-
-            return instrument;
+            return aux;
         }
 
         private bool InstrumentExists(int id)

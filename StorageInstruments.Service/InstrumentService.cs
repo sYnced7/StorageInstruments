@@ -3,6 +3,7 @@ using StorageInstruments.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace StorageInstruments.Service
 {
@@ -79,6 +80,41 @@ namespace StorageInstruments.Service
         {
             return instrumentRepository.GetCountOfInstruments();
         }
+
+        #region API
+        /// <summary>
+        /// Post an instrument Throught API
+        /// </summary>
+        /// <param name="instrument"></param>
+        /// <returns></returns>
+        public async Task<Instrument> PostInstrument(Instrument instrument)
+        {
+            if(instrument != null)
+            {
+                var aux = await instrumentRepository.PostInstrument(instrument);
+                if(aux != null)
+                {
+                    instrumentRepository.Commit();
+                }
+                return aux;
+            }
+
+            return null;
+        }
+        /// <summary>
+        /// Deletes an instrument throught API
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public async Task<Instrument> DeleteInstrument(int id)
+        {
+            if(id > 0)
+            {
+                var aux = await instrumentRepository.DeleteInstrument(id);
+            }
+            return null;
+        }
+        #endregion
 
     }
 }
