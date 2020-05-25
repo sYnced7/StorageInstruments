@@ -66,11 +66,11 @@ namespace StorageInstruments.Data
         #region API
 
 
-        public async Task<Instrument> PostInstrument(Instrument instrument)
+        public async Task<Instrument> PostInstrumentAsync(Instrument instrument)
         {
             return await Task.Factory.StartNew(() => Add(instrument));
         }
-        public async Task<Instrument> DeleteInstrument(int id)
+        public async Task<Instrument> DeleteInstrumentAsync(int id)
         {
             var aux = await db.Instruments.FindAsync(id);
             if(aux == null)
@@ -86,7 +86,7 @@ namespace StorageInstruments.Data
             return aux;
         }
 
-        public async Task<bool> PutInstrument(Instrument instrument)
+        public async Task<bool> UpdateInstrumentAsync(Instrument instrument)
         {
             var aux = await Task.Factory.StartNew(() => Update(instrument));
             if(aux != null)

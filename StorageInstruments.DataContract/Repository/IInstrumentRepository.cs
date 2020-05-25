@@ -23,13 +23,13 @@ namespace StorageInstruments.DataContract
         /// </summary>
         /// <param name="instrument"></param>
         /// <returns></returns>
-        Task<Instrument> PostInstrument(Instrument instrument);
+        Task<Instrument> PostInstrumentAsync(Instrument instrument);
         /// <summary>
         /// API Delete Action
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        Task<Instrument> DeleteInstrument(int id);
+        Task<Instrument> DeleteInstrumentAsync(int id);
 
         /// <summary>
         /// API Put Action
@@ -37,7 +37,7 @@ namespace StorageInstruments.DataContract
         /// <param name="id"></param>
         /// <param name="instrument"></param>
         /// <returns></returns>
-        Task<bool> PutInstrument(Instrument instrument);
+        Task<bool> UpdateInstrumentAsync(Instrument instrument);
 
         /// <summary>
         /// API Get All Action

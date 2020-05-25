@@ -87,11 +87,11 @@ namespace StorageInstruments.Service
         /// </summary>
         /// <param name="instrument"></param>
         /// <returns></returns>
-        public async Task<Instrument> PostInstrument(Instrument instrument)
+        public async Task<Instrument> PostInstrumentAsync(Instrument instrument)
         {
             if(instrument != null)
             {
-                var aux = await instrumentRepository.PostInstrument(instrument);
+                var aux = await instrumentRepository.PostInstrumentAsync(instrument);
                 return aux;
             }
 
@@ -102,20 +102,20 @@ namespace StorageInstruments.Service
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<Instrument> DeleteInstrument(int id)
+        public async Task<Instrument> DeleteInstrumentAsync(int id)
         {
             if(id > 0)
             {
-                var aux = await instrumentRepository.DeleteInstrument(id);
+                var aux = await instrumentRepository.DeleteInstrumentAsync(id);
             }
             return null;
         }
 
-        public async Task<bool> PutInstrument(Instrument instrument)
+        public async Task<bool> UpdateInstrumentAsync(Instrument instrument)
         {
             if(instrument != null)
             {
-                return await instrumentRepository.PutInstrument(instrument);
+                return await instrumentRepository.UpdateInstrumentAsync(instrument);
             }
 
             return false;

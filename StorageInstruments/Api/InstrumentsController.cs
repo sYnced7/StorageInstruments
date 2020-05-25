@@ -54,7 +54,7 @@ namespace StorageInstruments.Api
                 return BadRequest();
             }
 
-            if (!await instrumentService.PutInstrument(instrument))
+            if (!await instrumentService.UpdateInstrumentAsync(instrument))
             {
                 return NotFound();
             }
@@ -68,7 +68,7 @@ namespace StorageInstruments.Api
         [HttpPost]
         public async Task<ActionResult<Instrument>> PostInstrument(Instrument instrument)
         {
-            var aux = await instrumentService.PostInstrument(instrument);
+            var aux = await instrumentService.PostInstrumentAsync(instrument);
 
             return CreatedAtAction("GetInstrument", new { id = aux.Id }, aux);
         }
@@ -77,7 +77,7 @@ namespace StorageInstruments.Api
         [HttpDelete("{id}")]
         public async Task<ActionResult<Instrument>> DeleteInstrument(int id)
         {
-            var aux = await instrumentService.DeleteInstrument(id);
+            var aux = await instrumentService.DeleteInstrumentAsync(id);
 
             if (aux == null)
             {

@@ -13,9 +13,9 @@ namespace StorageInstruments.DataContract
         IEnumerable<Instrument> GetInstrumentsByName(string name);
         Instrument AddOrUpdateInstrument(Instrument instrument);
         int GetCountOfInstruments();
-        Task<Instrument> PostInstrument(Instrument instrument);
-        Task<Instrument> DeleteInstrument(int id);
-        Task<bool> PutInstrument(Instrument instrument);
+        Task<Instrument> PostInstrumentAsync(Instrument instrument);
+        Task<Instrument> DeleteInstrumentAsync(int id);
+        Task<bool> UpdateInstrumentAsync(Instrument instrument);
 
         Task<IEnumerable<Instrument>> GetInstrumentsAsync();
 
