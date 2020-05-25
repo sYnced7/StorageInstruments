@@ -60,7 +60,7 @@ namespace StorageInstruments.Data
         {
             var entity = db.Instruments.Attach(instrument);
             entity.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            return instrument;
+            return entity.Entity;
         }
 
         #region API
@@ -68,17 +68,44 @@ namespace StorageInstruments.Data
 
         public async Task<Instrument> PostInstrument(Instrument instrument)
         {
-            return Add(instrument);
+            return await Task.Factory.StartNew(() => Add(instrument));
         }
         public async Task<Instrument> DeleteInstrument(int id)
         {
-            var aux = db.Instruments.FindAsync(id);
+            var aux = await db.Instruments.FindAsync(id);
             if(aux == null)
             {
                 return null;
             }
 
-            return Delete(id);
+            await Task.Factory.StartNew(() => {
+                Delete(id);
+                Commit();
+                });
+
+            return aux;
+        }
+
+        public async Task<bool> PutInstrument(Instrument instrument)
+        {
+            var aux = await Task.Factory.StartNew(() => Update(instrument));
+            if(aux != null)
+            {
+                await Task.Factory.StartNew(() => Commit());
+                return true;
+            }
+
+            return false;
+        }
+
+        public async Task<IEnumerable<Instrument>> GetInstrumentsAsync()
+        {
+            return await Task.Factory.StartNew(() => GetInstrumentsByName(string.Empty));
+        }
+
+        public async Task<Instrument> GetInstrumentAsync(int id)
+        {
+            return await Task.Factory.StartNew(() => GetById(id));
         }
         #endregion
 

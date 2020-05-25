@@ -15,5 +15,10 @@ namespace StorageInstruments.DataContract
         int GetCountOfInstruments();
         Task<Instrument> PostInstrument(Instrument instrument);
         Task<Instrument> DeleteInstrument(int id);
+        Task<bool> PutInstrument(Instrument instrument);
+
+        Task<IEnumerable<Instrument>> GetInstrumentsAsync();
+
+        Task<Instrument> GetInstrumentAsync(int id);
     }
 }

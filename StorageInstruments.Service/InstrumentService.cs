@@ -92,10 +92,6 @@ namespace StorageInstruments.Service
             if(instrument != null)
             {
                 var aux = await instrumentRepository.PostInstrument(instrument);
-                if(aux != null)
-                {
-                    instrumentRepository.Commit();
-                }
                 return aux;
             }
 
@@ -114,6 +110,33 @@ namespace StorageInstruments.Service
             }
             return null;
         }
+
+        public async Task<bool> PutInstrument(Instrument instrument)
+        {
+            if(instrument != null)
+            {
+                return await instrumentRepository.PutInstrument(instrument);
+            }
+
+            return false;
+        }
+
+        public async Task<IEnumerable<Instrument>> GetInstrumentsAsync()
+        {
+            return await instrumentRepository.GetInstrumentsAsync();
+        }
+
+        public async Task<Instrument> GetInstrumentAsync(int id)
+        {
+            if(id > 0)
+            {
+               return await instrumentRepository.GetInstrumentAsync(id);
+            }
+
+            return null;
+        }
+
+
         #endregion
 
     }

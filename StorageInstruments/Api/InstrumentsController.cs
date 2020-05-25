@@ -14,11 +14,9 @@ namespace StorageInstruments.Api
     public class InstrumentsController : ControllerBase
     {
         private readonly IInstrumentService instrumentService;
-        private readonly InstrumentDbContext _context;
 
-        public InstrumentsController(IInstrumentService instrumentService, InstrumentDbContext context)
+        public InstrumentsController(IInstrumentService instrumentService)
         {
-            _context = context;
             this.instrumentService = instrumentService;
         }
 
@@ -26,14 +24,16 @@ namespace StorageInstruments.Api
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Instrument>>> GetInstruments()
         {
-            return await _context.Instruments.ToListAsync();
+            var aux = await instrumentService.GetInstrumentsAsync();
+            
+            return aux.ToList();
         }
 
         // GET: api/Instruments/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Instrument>> GetInstrument(int id)
         {
-            var instrument = await _context.Instruments.FindAsync(id);
+            var instrument = await instrumentService.GetInstrumentAsync(id);
 
             if (instrument == null)
             {
@@ -54,22 +54,9 @@ namespace StorageInstruments.Api
                 return BadRequest();
             }
 
-            _context.Entry(instrument).State = EntityState.Modified;
-
-            try
+            if (!await instrumentService.PutInstrument(instrument))
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!InstrumentExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return NotFound();
             }
 
             return NoContent();
@@ -100,9 +87,5 @@ namespace StorageInstruments.Api
             return aux;
         }
 
-        private bool InstrumentExists(int id)
-        {
-            return _context.Instruments.Any(e => e.Id == id);
-        }
     }
 }
