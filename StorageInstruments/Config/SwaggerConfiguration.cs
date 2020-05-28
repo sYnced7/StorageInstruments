@@ -17,6 +17,8 @@ namespace StorageInstruments.Config
 
         public static IApplicationBuilder AppBuilderConfig(IApplicationBuilder app)
         {
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
 
             return app;
         }

@@ -10,6 +10,7 @@ namespace StorageInstruments.Service
     public class InstrumentService : IInstrumentService
     {
         private readonly IInstrumentRepository instrumentRepository;
+
         public InstrumentService(IInstrumentRepository instrumentRepository)
         {
             this.instrumentRepository = instrumentRepository;
