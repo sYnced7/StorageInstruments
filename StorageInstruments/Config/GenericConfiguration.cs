@@ -56,6 +56,8 @@ namespace StorageInstruments.Config
                 endpoints.MapControllers();
             });
 
+            
+
             return app;
         }
     }

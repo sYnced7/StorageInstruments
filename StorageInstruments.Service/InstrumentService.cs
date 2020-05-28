@@ -1,8 +1,8 @@
-﻿using StorageInstruments.DataContract;
+﻿using Microsoft.Extensions.Logging;
+using StorageInstruments.DataContract;
+using StorageInstruments.DataContract.Utils;
 using StorageInstruments.Model;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace StorageInstruments.Service
@@ -10,10 +10,12 @@ namespace StorageInstruments.Service
     public class InstrumentService : IInstrumentService
     {
         private readonly IInstrumentRepository instrumentRepository;
+        private readonly ISeriLog logger;
 
-        public InstrumentService(IInstrumentRepository instrumentRepository)
+        public InstrumentService(IInstrumentRepository instrumentRepository, ISeriLog logger)
         {
             this.instrumentRepository = instrumentRepository;
+            this.logger = logger;
         }
 
         /// <summary>
@@ -29,7 +31,7 @@ namespace StorageInstruments.Service
                 instrumentRepository.Commit();
                 return instrument;
             }
-
+            logger.WriteLog("Failed to delete iteam with id " + id, LogLevel.Warning);
             return null;
         }
 
@@ -45,6 +47,7 @@ namespace StorageInstruments.Service
             {
                 return instrumentRepository.GetById(id);
             }
+            logger.WriteLog("Failed to Get iteam with id " + id, LogLevel.Warning);
             return null;
         }
 
@@ -95,7 +98,7 @@ namespace StorageInstruments.Service
                 var aux = await instrumentRepository.PostInstrumentAsync(instrument);
                 return aux;
             }
-
+            logger.WriteLog("Failed to Post Async", LogLevel.Warning);
             return null;
         }
         /// <summary>
@@ -109,6 +112,7 @@ namespace StorageInstruments.Service
             {
                 var aux = await instrumentRepository.DeleteInstrumentAsync(id);
             }
+            logger.WriteLog("Failed to Delete Async with id " + id, LogLevel.Warning);
             return null;
         }
 

@@ -39,12 +39,12 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
     <PackageReference Include="NSwag.AspNetCore" Version="13.5.0" />
     <PackageReference Include="OdeToCode.UseNodeModules" Version="3.0.0" />
-    <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\StorageInstruments.Data\StorageInstruments.Data.csproj" />
     <ProjectReference Include="..\StorageInstruments.Service\StorageInstruments.Service.csproj" />
+    <ProjectReference Include="..\StorageInstruments.Utils\StorageInstruments.Utils.csproj" />
   </ItemGroup>
 
   <ItemGroup>
