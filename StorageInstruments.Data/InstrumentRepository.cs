@@ -81,14 +81,14 @@ namespace StorageInstruments.Data
             await Task.Factory.StartNew(() => {
                 Delete(id);
                 Commit();
-                });
+                }).ConfigureAwait(false);
 
             return aux;
         }
 
         public async Task<bool> UpdateInstrumentAsync(Instrument instrument)
         {
-            var aux = await Task.Factory.StartNew(() => Update(instrument));
+            var aux = await Task.Factory.StartNew(() => Update(instrument)).ConfigureAwait(false);
             if(aux != null)
             {
                 await Task.Factory.StartNew(() => Commit());
@@ -100,12 +100,12 @@ namespace StorageInstruments.Data
 
         public async Task<IEnumerable<Instrument>> GetInstrumentsAsync()
         {
-            return await Task.Factory.StartNew(() => GetInstrumentsByName(string.Empty));
+            return await Task.Factory.StartNew(() => GetInstrumentsByName(string.Empty)).ConfigureAwait(false);
         }
 
         public async Task<Instrument> GetInstrumentAsync(int id)
         {
-            return await Task.Factory.StartNew(() => GetById(id));
+            return await Task.Factory.StartNew(() => GetById(id)).ConfigureAwait(false);
         }
         #endregion
 
