@@ -5,7 +5,7 @@ using System.Text;
 
 namespace StorageInstruments.Model
 {
-    public class User
+    public class User : IBaseEntity
     {
         [Key]
         public int Id { get; set; }

@@ -2,7 +2,7 @@
 
 namespace StorageInstruments.Model
 {
-    public class Instrument
+    public class Instrument : IBaseEntity
     {
         [Key]
         public int Id { get; set; }
