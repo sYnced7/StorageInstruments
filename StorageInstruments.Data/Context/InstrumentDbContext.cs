@@ -9,8 +9,8 @@ namespace StorageInstruments.Data
     public class InstrumentDbContext : DbContext
     {
         public DbSet<Instrument> Instruments { get; set; }
-        public DbSet<User> Users { get; set; }
 
+        public DbSet<User> Users { get; set; }
         public InstrumentDbContext(DbContextOptions<InstrumentDbContext> options)
             : base(options)
         {

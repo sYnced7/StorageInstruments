@@ -9,11 +9,11 @@ namespace StorageInstruments.Data
 {
     public abstract class BaseRepository<TEntity, TContext> : IRepository<TEntity>
         where TEntity : class, IBaseEntity
-        where TContext : DbContext
+        where TContext : InstrumentDbContext
     {
-        private readonly DbContext _context;
+        private readonly InstrumentDbContext _context;
         private readonly ISeriLog Log;
-        public BaseRepository(DbContext context, ISeriLog logger)
+        public BaseRepository(InstrumentDbContext context, ISeriLog logger)
         {
             this._context = context;
             Log = logger;

@@ -15,8 +15,8 @@ namespace StorageInstruments.Config
         public static IServiceCollection Config(IServiceCollection services, IConfiguration Configuration)
         {
             services = ConfigGeneric(services);
-            services = ContainerConfiguration.ConfigContext(services);
             services = ContextConfiguration.ConfigContext(services, Configuration);
+            services = ContainerConfiguration.ConfigContext(services);
             services = SwaggerConfiguration.ConfigSwagger(services);
             return services;
         }

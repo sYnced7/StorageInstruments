@@ -13,6 +13,7 @@ namespace StorageInstruments.Config
             {
                 options.UseSqlServer(Configuration.GetConnectionString("InstrumentsDb"));
             });
+
             return services;
         }
     }

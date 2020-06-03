@@ -8,6 +8,7 @@ using StorageInstruments.DataContract.Utils;
 using StorageInstruments.Model;
 using StorageInstruments.Service;
 using StorageInstruments.Utils;
+using User = StorageInstruments.Model.User;
 
 namespace StorageInstruments.Config
 {
@@ -17,7 +18,7 @@ namespace StorageInstruments.Config
         {
             services.AddScoped<IInstrumentService, InstrumentService>();
             services.AddScoped<IInstrumentRepository, InstrumentRepository>();
-            services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<,>));
+            services.AddScoped<IRepository<User>, UserRepository>();
             services.AddScoped<IUserService, UserService>();
             services.AddSingleton<ISeriLog, SeriLog>();
 
