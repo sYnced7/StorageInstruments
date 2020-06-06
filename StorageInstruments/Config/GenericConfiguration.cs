@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using JavaScriptEngineSwitcher.V8;
+using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
+using React.AspNet;
+
 
 namespace StorageInstruments.Config
 {
@@ -31,11 +31,19 @@ namespace StorageInstruments.Config
                                       builder.WithOrigins("http://localhost");
                                   });
             });
-
+            services.AddControllersWithViews();
             services.AddControllers();
             services.AddMvc();
             services.AddRazorPages();
 
+            #region react
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddReact();
+
+            // Make sure a JS engine is registered, or you will get an error!
+            services.AddJsEngineSwitcher(options => options.DefaultEngineName = V8JsEngine.EngineName)
+              .AddV8();
+            #endregion
             return services;
         }
 
@@ -68,7 +76,15 @@ namespace StorageInstruments.Config
                 endpoints.MapControllers();
             });
 
+            #region react
             
+            // Initialise ReactJS.NET. Must be before static files.
+            app.UseReact(config =>
+            {
+               
+            });
+            app.UseStaticFiles();
+            #endregion
 
             return app;
         }
