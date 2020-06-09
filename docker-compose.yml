@@ -1,8 +1,8 @@
-version: '2.0'
+version: '3.4'
 services:  
   storageinstruments:
     build:
-      context: ./services/StorageInstruments
+      context: ./services
       dockerfile: Dockerfile
     container_name: storageinstruments
     restart: on-failure
