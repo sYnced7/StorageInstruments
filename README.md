@@ -35,8 +35,8 @@ docker-compose up
 
 Open browser on:
 
-- [StorageInstruments web page](http://localhost:5001/Instruments) 
-- [Swagger Documentation](http://localhost:5001/swagger/index.html) 
+- [StorageInstruments web page](http://localhost:5001/Instruments) - http://localhost:5001/Instruments
+- [Swagger Documentation](http://localhost:5001/swagger/index.html) - http://localhost:5001/swagger
 
 ## Usage
 # OpenAPI/Swagger - UI
