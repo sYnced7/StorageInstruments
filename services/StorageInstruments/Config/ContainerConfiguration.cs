@@ -22,6 +22,7 @@ namespace StorageInstruments.Config
             services.AddScoped<IUserService, UserService>();
             services.AddSingleton<ISeriLog, SeriLog>();
 
+
             return services;
         }
     }

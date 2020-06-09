@@ -11,14 +11,21 @@ namespace StorageInstruments.Config
     {
         public static IServiceCollection ConfigSwagger(IServiceCollection services)
         {
-            services.AddOpenApiDocument();
+            services.AddOpenApiDocument(x =>
+            {
+                x.Title = "Storage Instruments API";
+            }
+            );
             return services;
         }
 
         public static IApplicationBuilder AppBuilderConfig(IApplicationBuilder app)
         {
             app.UseOpenApi();
-            app.UseSwaggerUi3();
+            app.UseSwaggerUi3(x =>
+            {
+                x.DocumentTitle = "Storage Instruments API";
+            });
 
             return app;
         }
