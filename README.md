@@ -15,7 +15,7 @@ Just to learn how to build an application with .net core, learn new things and c
 - [ ] Create a client with react
 - [x] Improve Architecture(Add a service layer to perform comunications with data layer)
 - [ ] Create good unit tests
-- [ ] Add a messaging protocol(like kafka or rabittmq) to manage requests to db.
+- [ ] Add a messaging protocol(like kafka or rabittmq).
 - [ ] Add User/Login support and analyze possible new features with database changes
 - [ ] Secure Rest API with jwt
 
