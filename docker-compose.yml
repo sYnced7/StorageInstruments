@@ -1,0 +1,10 @@
+version: '2.0'
+services:  
+  storageinstruments:
+    build:
+      context: ./services/StorageInstruments
+      dockerfile: Dockerfile
+    container_name: storageinstruments
+    restart: on-failure
+    ports:
+      - "5000:80"
