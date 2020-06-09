@@ -20,6 +20,23 @@ Just to learn how to build an application with .net core, learn new things and c
 - [ ] Secure Rest API with jwt
 
 
+## Installation
+
+```
+
+// root of project
+
+// Build the system (it will take a while) 
+docker-compose build
+// Run project
+docker-compose up
+
+```
+
+Open browser on:
+
+- [StorageInstruments web page](http://localhost:5001/Instruments) 
+- [Swagger Documentation](http://localhost:5001/swagger/index.html) 
 
 ## Usage
 # OpenAPI/Swagger - UI
