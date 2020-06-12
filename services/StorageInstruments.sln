@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageInstruments.MSTest",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageInstruments.Service", "StorageInstruments.Service\StorageInstruments.Service.csproj", "{C521ED0F-6ACB-4D0D-84A7-24131E852019}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageInstruments.Utils", "StorageInstruments.Utils\StorageInstruments.Utils.csproj", "{06A57E01-101F-4D3E-9537-581755C449D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageInstruments.Utils", "StorageInstruments.Utils\StorageInstruments.Utils.csproj", "{06A57E01-101F-4D3E-9537-581755C449D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageInstruments.DTO", "StorageInstruments.DTO\StorageInstruments.DTO.csproj", "{B715399E-302A-4E2A-9B3F-90DB8F67775A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{06A57E01-101F-4D3E-9537-581755C449D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06A57E01-101F-4D3E-9537-581755C449D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06A57E01-101F-4D3E-9537-581755C449D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B715399E-302A-4E2A-9B3F-90DB8F67775A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B715399E-302A-4E2A-9B3F-90DB8F67775A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B715399E-302A-4E2A-9B3F-90DB8F67775A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B715399E-302A-4E2A-9B3F-90DB8F67775A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
