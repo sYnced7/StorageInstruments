@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using StorageInstruments.Data;
 using StorageInstruments.DataContract;
+using StorageInstruments.DTO;
 using StorageInstruments.Model;
 
 namespace StorageInstruments.Pages.Instruments
@@ -19,7 +16,7 @@ namespace StorageInstruments.Pages.Instruments
         public IEnumerable<SelectListItem> LocationTypes { get; set; }
         public IEnumerable<SelectListItem> InstrumentTypes { get; set; }
         [BindProperty]
-        public Instrument Instrument { get; set; }
+        public InstrumentDto Instrument { get; set; }
         public EditModel(IInstrumentService instrumentService, IHtmlHelper htmlHelper)
         {
             this.instrumentService = instrumentService;
@@ -34,7 +31,7 @@ namespace StorageInstruments.Pages.Instruments
             }
             else
             {
-                Instrument = new Instrument();
+                Instrument = new InstrumentDto();
             }
             if (Instrument == null)
             {

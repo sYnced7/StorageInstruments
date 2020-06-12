@@ -7,6 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\StorageInstruments.DataContract\StorageInstruments.DataContract.csproj" />
     <ProjectReference Include="..\StorageInstruments.Data\StorageInstruments.Data.csproj" />
+    <ProjectReference Include="..\StorageInstruments.DTO\StorageInstruments.DTO.csproj" />
     <ProjectReference Include="..\StorageInstruments.Model\StorageInstruments.Model.csproj" />
   </ItemGroup>
 

@@ -68,7 +68,7 @@ namespace StorageInstruments.Data
 
         public async Task<Instrument> PostInstrumentAsync(Instrument instrument)
         {
-            return await Task.Factory.StartNew(() => Add(instrument));
+            return await Task.Factory.StartNew(() => Add(instrument)).ConfigureAwait(false);
         }
         public async Task<Instrument> DeleteInstrumentAsync(int id)
         {

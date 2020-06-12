@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using StorageInstruments.Data;
 using StorageInstruments.DataContract.Service;
 using StorageInstruments.DataContract.Utils;
-using StorageInstruments.Model;
+using StorageInstruments.DTO;
+
 
 namespace StorageInstruments.Api
 {
@@ -26,7 +21,7 @@ namespace StorageInstruments.Api
         }
 
         [HttpPost("{username}/{password}")]
-        public async Task<ActionResult<User>> GetUser(string username, string password)
+        public async Task<ActionResult<UserDto>> GetUser(string username, string password)
         {
             var user = await userService.Login(username, password);
 

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using StorageInstruments.DataContract;
-using StorageInstruments.Model;
-using StorageInstruments.Service;
+using StorageInstruments.DTO;
 
 namespace StorageInstruments.Pages.Instruments
 {
@@ -15,7 +10,7 @@ namespace StorageInstruments.Pages.Instruments
         private readonly IInstrumentService instrumentService;
 
         [BindProperty]
-        public Instrument Instrument { get; set; }
+        public InstrumentDto Instrument { get; set; }
         public DeleteModel(IInstrumentService instrumentService)
         {
             this.instrumentService = instrumentService;

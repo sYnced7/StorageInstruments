@@ -16,15 +16,15 @@ namespace StorageInstruments.DTO
             };
         }
 
-        public static Instrument InstrumentToDto(InstrumentDto instrumentDto)
+        public static InstrumentDto InstrumentToDto(Instrument instrument)
         {
-            return new Instrument()
+            return new InstrumentDto()
             {
-                Id = instrumentDto.Id,
-                Name = instrumentDto.Name,
-                Location = instrumentDto.Location,
-                owner = instrumentDto.owner,
-                Type = instrumentDto.Type
+                Id = instrument.Id,
+                Name = instrument.Name,
+                Location = instrument.Location,
+                owner = instrument.owner,
+                Type = instrument.Type
             };
         }
 
@@ -39,7 +39,7 @@ namespace StorageInstruments.DTO
             };
         }
 
-        public static UserDto ToDto(User user)
+        public static UserDto UserToDto(User user)
         {
             return new UserDto()
             {

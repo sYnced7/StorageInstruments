@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using StorageInstruments.DataContract;
-using StorageInstruments.Model;
+using StorageInstruments.DTO;
 
 namespace StorageInstruments.Pages.Instruments
 {
     public class DetailModel : PageModel
     {
         private readonly IInstrumentService instrumentService;
-        public Instrument Instrument { get; set; }
+        public InstrumentDto Instrument { get; set; }
         [TempData]
         public string Message { get; set; }
 

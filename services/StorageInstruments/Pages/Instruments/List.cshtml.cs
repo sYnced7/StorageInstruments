@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Configuration;
-using StorageInstruments.Data;
 using StorageInstruments.DataContract;
-using StorageInstruments.Model;
+using StorageInstruments.DTO;
 
 namespace StorageInstruments.Pages.Instruments
 {
@@ -15,7 +10,7 @@ namespace StorageInstruments.Pages.Instruments
     {
         private readonly IInstrumentService instrumentService;
 
-        public IEnumerable<Instrument> Instruments {get; set;}
+        public IEnumerable<InstrumentDto> Instruments {get; set;}
         [BindProperty(SupportsGet = true)]
         public string SearchTerm { get; set; }
 

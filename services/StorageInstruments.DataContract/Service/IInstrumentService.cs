@@ -1,24 +1,22 @@
-﻿using StorageInstruments.Model;
-using System;
+﻿using StorageInstruments.DTO;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace StorageInstruments.DataContract
 {
     public interface IInstrumentService
     {
-        Instrument GetInstrumentById(int id);
-        Instrument Delete(int id);
-        IEnumerable<Instrument> GetInstrumentsByName(string name);
-        Instrument AddOrUpdateInstrument(Instrument instrument);
+        InstrumentDto GetInstrumentById(int id);
+        InstrumentDto Delete(int id);
+        IEnumerable<InstrumentDto> GetInstrumentsByName(string name);
+        InstrumentDto AddOrUpdateInstrument(InstrumentDto instrument);
         int GetCountOfInstruments();
-        Task<Instrument> PostInstrumentAsync(Instrument instrument);
-        Task<Instrument> DeleteInstrumentAsync(int id);
-        Task<bool> UpdateInstrumentAsync(Instrument instrument);
+        Task<InstrumentDto> PostInstrumentAsync(InstrumentDto instrument);
+        Task<InstrumentDto> DeleteInstrumentAsync(int id);
+        Task<bool> UpdateInstrumentAsync(InstrumentDto instrument);
 
-        Task<IEnumerable<Instrument>> GetInstrumentsAsync();
+        Task<IEnumerable<InstrumentDto>> GetInstrumentsAsync();
 
-        Task<Instrument> GetInstrumentAsync(int id);
+        Task<InstrumentDto> GetInstrumentAsync(int id);
     }
 }

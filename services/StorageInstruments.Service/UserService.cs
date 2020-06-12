@@ -1,6 +1,7 @@
 ﻿using StorageInstruments.DataContract.Repository;
 using StorageInstruments.DataContract.Service;
 using StorageInstruments.DataContract.Utils;
+using StorageInstruments.DTO;
 using StorageInstruments.Model;
 using System.Linq;
 using System.Security.Cryptography;
@@ -20,15 +21,19 @@ namespace StorageInstruments.Service
             this.logger = logger;
         }
 
-        public async Task<User> Login(string username, string password)
+        public async Task<UserDto> Login(string username, string password)
         {
             if(!string.IsNullOrWhiteSpace(username) || !string.IsNullOrWhiteSpace(password))
             {
                 var aux = await repository.GetAllAsync();
-                return aux.FirstOrDefault(x => (x.UserName.Equals(username) && x.Password.Equals(password)));
+                var toParse = aux.FirstOrDefault(x => (x.UserName.Equals(username) && x.Password.Equals(password)));
+                if (toParse == null)
+                {
+                    logger.WriteLog($"Username not found", Microsoft.Extensions.Logging.LogLevel.Warning);
+                    return null;
+                }
+                return DTO.DTO.UserToDto(toParse);
             }
-
-            logger.WriteLog($"Username not found", Microsoft.Extensions.Logging.LogLevel.Warning);
             return null;
         }
 

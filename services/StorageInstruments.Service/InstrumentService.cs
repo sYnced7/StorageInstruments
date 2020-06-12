@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using StorageInstruments.DataContract;
 using StorageInstruments.DataContract.Utils;
+using StorageInstruments.DTO;
 using StorageInstruments.Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -23,13 +24,13 @@ namespace StorageInstruments.Service
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Instrument Delete(int id)
+        public InstrumentDto Delete(int id)
         {
             if(id != 0)
             {
                 var instrument = instrumentRepository.Delete(id);
                 instrumentRepository.Commit();
-                return instrument;
+                return DTO.DTO.InstrumentToDto(instrument);
             }
             logger.WriteLog("Failed to delete iteam with id " + id, LogLevel.Warning);
             return null;
@@ -41,11 +42,11 @@ namespace StorageInstruments.Service
         /// <param name="getById"></param>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Instrument GetInstrumentById(int id)
+        public InstrumentDto GetInstrumentById(int id)
         {
             if(id != 0)
             {
-                return instrumentRepository.GetById(id);
+                return DTO.DTO.InstrumentToDto(instrumentRepository.GetById(id));
             }
             logger.WriteLog("Failed to Get iteam with id " + id, LogLevel.Warning);
             return null;
@@ -56,24 +57,24 @@ namespace StorageInstruments.Service
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public IEnumerable<Instrument> GetInstrumentsByName(string name)
+        public IEnumerable<InstrumentDto> GetInstrumentsByName(string name)
         {
-            return instrumentRepository.GetInstrumentsByName(name);
+            return ParserIEnumInstrument(instrumentRepository.GetInstrumentsByName(name));
         }
         /// <summary>
         /// Validates if is to update or add a new instrument
         /// </summary>
         /// <param name="instrument"></param>
         /// <returns></returns>
-        public Instrument AddOrUpdateInstrument(Instrument instrument)
+        public InstrumentDto AddOrUpdateInstrument(InstrumentDto instrument)
         {
             if (instrument.Id > 0)
             {
-                instrumentRepository.Update(instrument);
+                instrumentRepository.Update(DTO.DTO.DtoToInstrument(instrument));
             }
             else
             {
-                instrumentRepository.Add(instrument);
+                instrumentRepository.Add(DTO.DTO.DtoToInstrument(instrument));
             }
             instrumentRepository.Commit();
 
@@ -91,12 +92,13 @@ namespace StorageInstruments.Service
         /// </summary>
         /// <param name="instrument"></param>
         /// <returns></returns>
-        public async Task<Instrument> PostInstrumentAsync(Instrument instrument)
+        public async Task<InstrumentDto> PostInstrumentAsync(InstrumentDto instrument)
         {
             if(instrument != null)
             {
-                var aux = await instrumentRepository.PostInstrumentAsync(instrument);
-                return aux;
+                var aux = await instrumentRepository.PostInstrumentAsync(DTO.DTO.DtoToInstrument(instrument));
+                instrumentRepository.Commit();
+                return DTO.DTO.InstrumentToDto(aux);
             }
             logger.WriteLog("Failed to Post Async", LogLevel.Warning);
             return null;
@@ -106,7 +108,7 @@ namespace StorageInstruments.Service
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<Instrument> DeleteInstrumentAsync(int id)
+        public async Task<InstrumentDto> DeleteInstrumentAsync(int id)
         {
             if(id > 0)
             {
@@ -116,26 +118,26 @@ namespace StorageInstruments.Service
             return null;
         }
 
-        public async Task<bool> UpdateInstrumentAsync(Instrument instrument)
+        public async Task<bool> UpdateInstrumentAsync(InstrumentDto instrument)
         {
             if(instrument != null)
             {
-                return await instrumentRepository.UpdateInstrumentAsync(instrument);
+                return await instrumentRepository.UpdateInstrumentAsync(DTO.DTO.DtoToInstrument(instrument));
             }
 
             return false;
         }
 
-        public async Task<IEnumerable<Instrument>> GetInstrumentsAsync()
+        public async Task<IEnumerable<InstrumentDto>> GetInstrumentsAsync()
         {
-            return await instrumentRepository.GetInstrumentsAsync();
+            return ParserIEnumInstrument(await instrumentRepository.GetInstrumentsAsync());
         }
 
-        public async Task<Instrument> GetInstrumentAsync(int id)
+        public async Task<InstrumentDto> GetInstrumentAsync(int id)
         {
             if(id > 0)
             {
-               return await instrumentRepository.GetInstrumentAsync(id);
+               return  DTO.DTO.InstrumentToDto(await instrumentRepository.GetInstrumentAsync(id));
             }
 
             return null;
@@ -143,6 +145,18 @@ namespace StorageInstruments.Service
 
 
         #endregion
+
+        public IEnumerable<InstrumentDto> ParserIEnumInstrument(IEnumerable<Instrument> instruments)
+        {
+            List<InstrumentDto> parser = new List<InstrumentDto>();
+
+            foreach (var item in instruments)
+            {
+                parser.Add(DTO.DTO.InstrumentToDto(item));
+            }
+
+            return parser;
+        }
 
     }
 }
