@@ -56,4 +56,6 @@ Open browser on:
 ![alt text](https://github.com/sYnced7/StorageInstruments/blob/master/documentation/web-ui/delete.PNG)
 
 ##Model
-![alt text](https://github.com/sYnced7/StorageInstruments/blob/master/documentation/uml/class/modelClass.PNG)
+![alt text](https://github.com/sYnced7/StorageInstruments/blob/master/documentation/uml/class/modelClass.png)
+
+
