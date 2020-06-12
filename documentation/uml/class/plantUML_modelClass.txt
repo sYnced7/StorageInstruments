@@ -1,0 +1,48 @@
+@startuml
+
+title Model - Class Diagram
+
+
+class IBaseEntity 
+{
+  +Int Id
+}
+
+class Instrument
+{
+  +string Name
+  +LocationType LocationType
+  +string Owner
+  +InstrumentType InstrumentType
+}
+class User
+{
+    +string UserName
+    +string Password
+    +UserType UserType
+}
+class InstrumentType
+{
+    +enum {Chords = 1,
+        Percurssion = 2,
+        Tools = 3,
+        Wind = 4}
+}
+class LocationType
+{
+    +enum {Home,
+        WithOwner,
+        InFestival,}
+}
+class UserType 
+{
+    +string Name
+}
+
+IBaseEntity <|-down- Instrument: Inheritance
+IBaseEntity <|-down- User: Inheritance
+IBaseEntity <|-down- UserType: Inheritance
+User <|-left- UserType: Inheritance
+Instrument <|-right- InstrumentType: Inheritance
+Instrument <|-down- LocationType: Inheritance
+@enduml
