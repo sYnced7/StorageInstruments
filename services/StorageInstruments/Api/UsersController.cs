@@ -86,17 +86,21 @@ namespace StorageInstruments.Api
         //    return NoContent();
         //}
 
-        //// POST: api/Users
-        //// To protect from overposting attacks, enable the specific properties you want to bind to, for
-        //// more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        //[HttpPost]
-        //public async Task<ActionResult<User>> PostUser(User user)
-        //{
-        //    _context.Users.Add(user);
-        //    await _context.SaveChangesAsync();
+        // POST: api/Users
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPost]
+        public async Task<ActionResult<UserDto>> PostUser(UserDto user)
+        {
+            var aux = await userService.Register(user.UserName, user.Password);
 
-        //    return CreatedAtAction("GetUser", new { id = user.Id }, user);
-        //}
+            if (aux == null)
+            {
+                return NotFound();
+            }
+
+            return CreatedAtAction("GetUser", new { id = user.Id }, user);
+        }
 
         //// DELETE: api/Users/5
         //[HttpDelete("{id}")]

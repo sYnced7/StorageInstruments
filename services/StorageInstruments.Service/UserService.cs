@@ -26,13 +26,29 @@ namespace StorageInstruments.Service
             if(!string.IsNullOrWhiteSpace(username) || !string.IsNullOrWhiteSpace(password))
             {
                 var aux = await repository.GetAllAsync();
-                var toParse = aux.FirstOrDefault(x => (x.UserName.Equals(username) && x.Password.Equals(password)));
+                var toParse = aux.FirstOrDefault(x => (x.UserName.Equals(username) && x.Password.Equals(EncryptPassword(password))));
                 if (toParse == null)
                 {
                     logger.WriteLog($"Username not found", Microsoft.Extensions.Logging.LogLevel.Warning);
                     return null;
                 }
-                return DTO.DTO.UserToDto(toParse);
+                var result = DTO.DTO.UserToDto(toParse);
+                result.Logged = true;
+                return result;
+            }
+            return null;
+        }
+
+        public async Task<UserDto> Register(string username, string password)
+        {
+            if (!string.IsNullOrWhiteSpace(username) || !string.IsNullOrWhiteSpace(password))
+            {
+                User u = new User()
+                {
+                    UserName = username,
+                    Password = EncryptPassword(password)
+                };
+                return DTO.DTO.UserToDto(await repository.CreateAsync(u));
             }
             return null;
         }

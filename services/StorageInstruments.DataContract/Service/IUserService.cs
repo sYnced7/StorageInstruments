@@ -6,5 +6,6 @@ namespace StorageInstruments.DataContract.Service
     public interface IUserService
     {
         Task<UserDto> Login(string username, string password);
+        Task<UserDto> Register(string username, string password);
     }
 }

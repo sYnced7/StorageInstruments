@@ -39,3 +39,5 @@ msbuild.wrn
 
 # Logs
 logs
+/services/services/Data/nodes/0
+/Elk
