@@ -13,11 +13,13 @@
     <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
     <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
+    <PackageReference Include="NSubstitute" Version="4.2.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\StorageInstruments.Data\StorageInstruments.Data.csproj" />
     <ProjectReference Include="..\StorageInstruments.Model\StorageInstruments.Model.csproj" />
+    <ProjectReference Include="..\StorageInstruments.Service\StorageInstruments.Service.csproj" />
   </ItemGroup>
 
 </Project>

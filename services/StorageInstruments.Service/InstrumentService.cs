@@ -26,13 +26,15 @@ namespace StorageInstruments.Service
         /// <returns></returns>
         public InstrumentDto Delete(int id)
         {
-            if(id != 0)
+            if(id > 0)
             {
                 var instrument = instrumentRepository.Delete(id);
                 instrumentRepository.Commit();
                 return DTO.DTO.InstrumentToDto(instrument);
             }
+
             logger.WriteLog("Failed to delete iteam with id " + id, LogLevel.Warning);
+
             return null;
         }
 
@@ -44,7 +46,7 @@ namespace StorageInstruments.Service
         /// <returns></returns>
         public InstrumentDto GetInstrumentById(int id)
         {
-            if(id != 0)
+            if(id > 0)
             {
                 return DTO.DTO.InstrumentToDto(instrumentRepository.GetById(id));
             }
